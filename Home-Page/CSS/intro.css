@@ -4,7 +4,7 @@
 section.intro {
     background-attachment: fixed;
     height: 90vh;
-    background-image: url(./assets/giscardpunk.jpg);
+    background-image: url(../assets/giscardpunk.jpg);
     background-size: cover;
     background-position: 0% 130%;
 }

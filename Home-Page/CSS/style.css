@@ -8,12 +8,12 @@ font-family: 'Oswald', sans-serif;
 */
 
 /* Reset du style */
-@import url(../../../../../common-resources/reset.css);
+@import url(../../common-ressources/reset.css);
 /* Autres pages CSS */
-@import url(intro.css);
-@import url(developement.css);
-@import url(transition.css);
-@import url(menu-deroulant.css);
+@import url(../CSS/intro.css);
+@import url(../CSS/developement.css);
+@import url(../CSS/transition.css);
+@import url(../CSS/menu-deroulant.css);
 
 body {
   font-size: 16px;
