@@ -1,0 +1,85 @@
+    header {
+    z-index: 10;
+    padding: 8px 16px;
+    position: fixed;
+    background-color: #00000055;
+    backdrop-filter: blur(2px);
+    color: #ffb64d; 
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100vw;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+/* Espacements des éléments du header*/
+header .actions,
+header .logo {
+    flex: 1;
+}
+
+header .menu {
+    flex: 2;
+}
+
+img.bagnole {
+    cursor: pointer;
+    height: 25px;
+}
+
+button.homebutton {
+    cursor: pointer;
+    border: none;
+    color: #ffb64d; 
+    background-color: #0000;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
+}
+
+header .actions {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+header .menu {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.baisedeux {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    text-transform: uppercase;
+
+    /* background-color: #ffffffd0; */
+    border: 1px solid #fff;
+    color: #ffb64d;
+    padding: 8px 32px;
+    font-family: 'Fjalla One', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+
+    background-color: #0000;
+}
+
+.baisedeux:hover {
+    background-color: #fff5;
+}
+
+.header button {
+    background-color: #0000;
+}
