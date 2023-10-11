@@ -1,11 +1,55 @@
 <div class="headerdiv">
-    <p>super header de fou</p>
-    <a href="">hmm ?</a>
+    <div class="roll-down-menu">
+        <div>
+            <button class="header-button">projets</button>
+            <svg id="down-pointing-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="23.5519" y="11.7583" width="16.6286" height="5.54403" transform="rotate(135 23.5519 11.7583)" fill="#DAC5A6"/>
+                <rect width="16.6286" height="5.54403" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15.6782 19.6316)" fill="#DAC5A6"/>
+            </svg>
+
+            <div class="roll-down-menu-content">
+                <a href="">projet 1</a>
+                <a href="">projet 2</a>
+                <a href="">projet 3</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
-    div.headerdiv {
-        justify-content: space-between;
-        background-color: aqua;
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+    .headerdiv {
+        position: fixed;
+        background-color: rgba(74, 33, 10, 0.60);
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        padding: 1.5vw;
     }
+
+    .headerdiv .header-button {
+        border: none;
+        background-color: #0000;
+        color: #DAC5A6;
+        text-align: center;
+        font-family: Rubik Mono One;
+        font-size: 2rem;
+    }
+
+    .roll-down-menu {
+        position: relative;
+    }
+
+    .roll-down-menu-content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .roll-down-menu:hover .roll-down-menu-content {
+        display: block;
+    }
+
 </style>
