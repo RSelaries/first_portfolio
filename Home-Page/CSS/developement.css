@@ -1,6 +1,7 @@
 /* Deuxième section  */
 section.developement {
     padding: 64px;
+    padding-bottom: 0   ;
     display: flex;
     flex-direction: column;
     gap: 16px;

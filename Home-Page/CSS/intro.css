@@ -4,14 +4,9 @@
 section.intro {
     background-attachment: fixed;
     height: 90vh;
-    background-image: url(../assets/giscardpunk.jpg);
+    background-image: url(../assets/Images/giscardpunk.jpg);
     background-size: cover;
     background-position: 0% 130%;
-}
-
-div.imgiscard {
-    z-index: 0;
-    background-image: url(./assets/giscardpunk.jpg);
 }
 
 /* Bouton principal */
