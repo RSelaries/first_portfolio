@@ -1,0 +1,11 @@
+@import url(../../assets/css-assets/reset.css);
+
+section.welcome {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background-image: url(../../assets/images/perrine_backlit_mcdo-cup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+}

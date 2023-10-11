@@ -1,0 +1,11 @@
+/* Reset CSS */
+body, body * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  
+  /* Remove scrollbars (for windows) */
+  *::-webkit-scrollbar {
+    display: none;
+  }
