@@ -1,6 +1,6 @@
 <div class="headerdiv">
     <div class="home-button">
-
+        <a href="../../index.html">HOMzzzzE</a>
     </div>
 
     <div class="center-buttons">
@@ -42,13 +42,18 @@
 
     </div>
 
+    <div class="right-stuff">
+        <p>ho</p>
+    </div>
+
 </div>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
     .headerdiv {
-        justify-content: center;
+        /* justify-content: space-between;       */
+        align-items: center;
         position: fixed;
         background-color: rgba(74, 33, 10, 0.60);
         display: flex;
@@ -58,6 +63,7 @@
     }
 
     .headerdiv .header-button {
+        flex: 2;
         border: none;
         background-color: #0000;
         color: #DAC5A6;
@@ -104,7 +110,21 @@
         border-bottom: 4px solid #DAC5A6;
     }
 
-    .down-arrow {
-        size: 2000px;
+    .home-button a {
+        flex: 1;
+        text-decoration: none;
+        color: #DAC5A6;
+        padding: 0.4vw 1vw;
+        font-size: 2.3rem;
+        font-family: Rubik Mono One;
+    }
+
+    .right-stuff p {
+        flex: 1;
+        text-decoration: none;
+        color: #DAC5A6;
+        padding: 0.4vw 1vw;
+        font-size: 2.3rem;
+        font-family: Rubik Mono One;
     }
 </style>
