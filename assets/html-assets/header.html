@@ -1,31 +1,60 @@
 <div class="headerdiv">
-    <div class="roll-down-menu">
-        <div>
-            <button class="header-button">projets</button>
-            <svg id="down-pointing-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <rect x="23.5519" y="11.7583" width="16.6286" height="5.54403" transform="rotate(135 23.5519 11.7583)" fill="#DAC5A6"/>
-                <rect width="16.6286" height="5.54403" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15.6782 19.6316)" fill="#DAC5A6"/>
-            </svg>
+    <div class="home-button">
 
-            <div class="roll-down-menu-content">
-                <a href="">projet 1</a>
-                <a href="">projet 2</a>
-                <a href="">projet 3</a>
+    </div>
+
+    <div class="center-buttons">
+        <div class="roll-down-menu">
+            <div>
+                <button class="header-button">photos</button>
+
+                <div class="roll-down-menu-content">
+                    <a href="">projet 1</a>
+                    <a href="">projet 2</a>
+                    <a class="lastone" href="">projet 3 </a>
+                </div>
             </div>
         </div>
+
+        <div class="roll-down-menu">
+            <div>
+                <button class="header-button">projets</button>
+
+                <div class="roll-down-menu-content">
+                    <a href="">projet 1</a>
+                    <a href="">projet 2</a>
+                    <a class="lastone" href="">projet 3 </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="roll-down-menu">
+            <div>
+                <button class="header-button">photos</button>
+
+                <div class="roll-down-menu-content">
+                    <a href="">projet 1</a>
+                    <a href="">projet 2</a>
+                    <a class="lastone" href="">projet 3 </a>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </div>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
     .headerdiv {
+        justify-content: center;
         position: fixed;
         background-color: rgba(74, 33, 10, 0.60);
         display: flex;
         flex-direction: row;
         width: 100vw;
-        padding: 1.5vw;
+        /* padding: 1.5vw; */
     }
 
     .headerdiv .header-button {
@@ -34,7 +63,13 @@
         color: #DAC5A6;
         text-align: center;
         font-family: Rubik Mono One;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding: 1.2vw;
+    }
+
+    .center-buttons {
+        display: flex;
+        flex-direction: row;
     }
 
     .roll-down-menu {
@@ -45,11 +80,31 @@
         display: none;
         position: absolute;
         width: 100%;
-        overflow: auto;
+        /* overflow: auto; */
     }
 
     .roll-down-menu:hover .roll-down-menu-content {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
+    .roll-down-menu-content a {
+        width: 20vw;
+        background-color: #0009;
+        color: #DAC5A6;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: Rubik Mono One;
+        padding: 0.7vw 1.5vw;
+        border: 4px solid #DAC5A6;
+        border-bottom: none;
+    }
+
+    .roll-down-menu-content .lastone{
+        border-bottom: 4px solid #DAC5A6;
+    }
+
+    .down-arrow {
+        size: 2000px;
+    }
 </style>

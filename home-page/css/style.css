@@ -9,3 +9,16 @@ section.welcome {
     background-size: cover;
     background-position: 0 50%;
 }
+
+.welcome .left-content {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #DAC5A6;
+    text-transform: uppercase;
+    font-family: Rubik Mono One;
+    font-size: 2rem;
+} 
