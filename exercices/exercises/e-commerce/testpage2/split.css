@@ -1,0 +1,91 @@
+section.split {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.split div.left-content {
+    width: 40vw;
+    background-image: url(../page\ principale/assets/4chan.png);
+    background-size: cover;
+}
+
+.split div.right-content {
+    padding: 10vh 15vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+    width: 60vw;
+    font-size: 2em;   
+
+    overflow: scroll;
+}
+
+.split h1 {
+    font-size: 4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+h1.fourchan {
+    color: #990000;
+}
+
+h1.reddit {
+    color: #FF4500	;
+}
+
+.split p {
+    font-family: Georgia, 'Times New Roman', Times, serif, 'Arial Narrow', Arial, sans-serif;
+}
+
+.split .imgtxt {
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+
+    font-size: 0.7em;
+    align-items: center;}
+
+.split .imgtxt div {
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    height: fit-content;
+    gap: 2vh;
+}
+
+.split .imgtxt img {
+    /* flex: 1; */
+    /* width: 0; */
+    height: 200px;
+}
+
+.split .imgtxt h2 {
+    font-size: 1.5em;
+}
+
+.split .imgtxt .trait{
+    border-top: solid 4px #990000;
+    width: 25%;
+    margin-top: -1.5vh;
+}
+
+.split .imgtxt h2 {
+    color: #006600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.split .imgtxt .reddit .trait{
+    border-top: solid 4px #000;
+}
+
+.split .imgtxt .reddit h2 {
+    color: #FF4500;
+}

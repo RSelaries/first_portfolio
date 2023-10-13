@@ -1,0 +1,26 @@
+/* Fonts familly */
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fjalla+One&family=Sedgwick+Ave+Display&display=swap&family=Oswald&display=swap");
+
+/* FONTS :
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Dela Gothic One', cursive;
+font-family: 'Oswald', sans-serif;
+*/
+
+/* Reset du style */
+@import url(../../../../assets/css-assets/reset.css);
+/* Autres pages CSS */
+@import url(intro.css);
+@import url(developement.css);
+@import url(transition.css);
+@import url(menu-deroulant.css);
+
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 1250px) {
+  body {
+    font-size: 12px;
+  }
+}
