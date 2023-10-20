@@ -1,4 +1,5 @@
 @import url(../../assets/css-assets/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 section.welcome {
     width: 100vw;
@@ -22,3 +23,9 @@ section.welcome {
     font-family: Rubik Mono One;
     font-size: 2rem;
 } 
+
+.header {
+    position:fixed;
+    border: none;
+    width: 100vw;
+}

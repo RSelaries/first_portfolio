@@ -1,16 +1,18 @@
 <div class="headerdiv">
     <div class="left-window" id="leftWindow">
-
+        <a class="home-button" href="../../index.html">home</a>
+        <a href="">exercices</a>
+        <a href=""></a>
+        <a href=""></a>
     </div>
 
     <div class="burger-menu">
-        <div class="burger-menu-button" id="openBtn">
-            <div></div>
-            <div></div>
-            <div></div> 
-        </div>
+        <span class="burger-menu-button" id="openBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
     </div>
-
 
     <div class="center-buttons">
         <div class="roll-down-menu">
@@ -36,7 +38,7 @@
                 </div>
             </div>
         </div>
-
+ 
         <div class="roll-down-menu">
             <div>
                 <button class="header-button">dessins</button>
@@ -60,7 +62,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
     .headerdiv {
-        /* justify-content: space-between;       */
+        /* justify-content: space-between; */
         align-items: center;
         position: fixed;
         background-color: #4a210a99;
@@ -68,6 +70,7 @@
         flex-direction: row;
         width: 100vw;
         /* padding: 1.5vw; */
+        padding: 0 1rem;
     }
 
     .headerdiv .header-button {
@@ -134,14 +137,14 @@
     }
 
     .burger-menu-button {
-        padding-left: 1rem;
+        width: fit-content;
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
         cursor: pointer;
     }
 
-    .burger-menu-button div {
+    .burger-menu-button span {
         border-radius: 0.15rem;
         width: 2.5rem;
         height: 0.4rem;
@@ -168,7 +171,7 @@
 
 <script>
     // var leftWindow = document.getElementById("leftWindow");
-    var openBtn = document.getElementById("openBtn");
+    let openBtn = document.getElementById('openBtn');
     var closeBtn = document.getElementById("closeBtn");
 
     openBtn.onclick = openBurger;
