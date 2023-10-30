@@ -1,5 +1,5 @@
 @import url(../../assets/css-assets/reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url(../../assets/css-assets/fonts.css);
 
 .header {
     position:fixed;
