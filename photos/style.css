@@ -1,2 +1,55 @@
 @import url(../assets/css-assets/reset.css);
 
+body {
+    overflow: overlay;
+
+    font-family: Rubik Mono One;
+    font-size: 12px;
+    color: #DAC5A6;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-album-cover {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+
+    background-size: cover;
+    background-position: 50%;
+}
+
+.filter {
+    width: 50vw;
+    height: 80%;
+    background-color: #0007;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter:hover {
+    transition: all 0s;
+    background-color: #0000;
+}
+
+.photo-album-name {
+    z-index: 99;    /* The header Z-index is set at 100 */
+
+    background-color: #0009;
+    width: 100%;
+    height: fit-content;
+}
+
+.photo-album-cover .photo-album-name h1 {
+    padding: 8px 20px;
+}
+
+/* Demander au prof comment automatiser ça */
+#série_1_name { background-image: url(./assets/miniatures/série_1_name.jpg); }
+#série_2_name { background-image: url(./assets/miniatures/série_2_name.jpg); }
+#série_3_name { background-image: url(./assets/miniatures/série_3_name.jpg); }
+#série_4_name { background-image: url(./assets/miniatures/série_4_name.jpg); }

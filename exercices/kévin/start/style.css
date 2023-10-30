@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
+/* Reset CSS */
+body, body * {
+  margin: unset;
+}
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  background-color: #ebb1f9;
+  font-size:50px;;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.box-model-demo{
+  margin: 16px;
+  margin-top: 32px;
+  border: solid 8px #fff9;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+a:active{
+  color: purple;
+}
+
+a:visited{
+  color:#a774c5
+}
+
+div.gallery {
+    height: 360px;
+    padding:32px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+
+
+  div.icons {
+    margin: 16px;
+    border: solid 2px #fff;
+    border-radius: 20px;
+    padding: 4px;
+    display:flex;
+    flex-direction: row;
+    gap:4px;
+  }
+  
+
+  div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff5;
+    background-size: contain;
+    border-radius: 16px;
+    cursor:pointer;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  div.icon-1 {
+    background-image: url(assets/sugar.svg);
+  }
+
+  div.icon-2 {
+    background-image: url(assets/donut.svg);
+  }
+
+  div.icon:hover{
+    background-color: #a774c5;
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+  }
