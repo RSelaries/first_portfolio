@@ -1,0 +1,30 @@
+@import url(../../assets/css-assets/reset.css);
+
+body {
+    background-color: #4a210a;
+}
+
+.container {
+    width: 100vw;
+    padding: 10px;
+    padding-top: 65px;
+}
+
+.gallery-container {
+    column-count: 4;
+    column-gap: 0px;
+}
+
+img {
+    padding: 10px 10px;
+    width: 100%;
+    object-fit: cover;
+    /* border-radius: 15px; */
+}
+
+figure {
+    margin: 0;
+    display: inline-block;
+    margin-bottom: 0px;
+    width: 100%;
+}
