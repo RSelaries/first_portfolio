@@ -8,9 +8,9 @@
 
     <div class="burger-menu">
         <span class="burger-menu-button" id="openBtn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span id="openBtn1"></span>
+            <span id="openBtn2"></span>
+            <span id="openBtn3"></span>
         </span>
     </div>
 
@@ -171,31 +171,20 @@
 </style>    
 
 <script>
-    // var leftWindow = document.getElementById("leftWindow");
-    let openBtn = document.getElementById('openBtn');
-    var closeBtn = document.getElementById("closeBtn");
+    var leftWindow = document.getElementById('leftWindow');
+    var openBtn = document.getElementById("openBtn");
+    var openBtn1 = document.getElementById("openBtn1");
+    var openBtn2 = document.getElementById("openBtn2");
+    var openBtn3 = document.getElementById("openBtn3");
 
-    openBtn.onclick = openBurger;
-    // closeBtn.onclick = closeBurger;
-
-    /* Set the width of the side navigation to 250px */
-    function openBurger() {
-        leftWindow.classList.add("active");
-    }
-
-    /* Set the width of the side navigation to 0 */
-    function closeBurger() {
-        leftWindow.classList.remove("active");
-    }
-
-    // When you click anywhere (exept the menu) it disappear
-    window.onclick = function(){
-        var leftWindow = document.getElementById('leftWindow');
-        var openBtn = document.getElementById("openBtn");
-        document.onclick = function(e){
-                if(e.target.id !== 'leftWindow' && e.target.id !=='openBtn'){
+    document.onclick = function(e) {
+        if (e.target.id !== 'leftWindow') {
+            if (e.target.id == 'openBtn' || e.target.id == 'openBtn1' || e.target.id == 'openBtn2' || e.target.id == 'openBtn3') {
+                leftWindow.classList.add("active");
+            } else if (e.target.id !== 'openBtn') {
                 leftWindow.classList.remove("active");
             }
-        };
-    };
+        }
+
+    }
 </script>
