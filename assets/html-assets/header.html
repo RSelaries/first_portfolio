@@ -1,4 +1,5 @@
 <div class="headerdiv">
+    <!-- BURGER MENU WINDOW -->
     <div class="left-window" id="leftWindow">
         <a class="home-button" href="../../index.html">home</a>
         <a href="">exercices</a>
@@ -6,6 +7,7 @@
         <a href=""></a>
     </div>
 
+    <!-- BURGER MENU BUTTON -->
     <div class="burger-menu">
         <span class="burger-menu-button" id="openBtn">
             <span id="openBtn1"></span>
@@ -14,47 +16,15 @@
         </span>
     </div>
 
+    <!-- CENTER BUTTONS -->
     <div class="center-buttons">
-        <div class="roll-down-menu">
-            <div>
-                <button class="header-button">photos</button>
-
-                <div class="roll-down-menu-content">
-                    <a href="">page 3</a>
-                    <a href="">page 2</a>
-                    <a class="lastone" href="../../photos/page_1/index.html">page 1</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="roll-down-menu">
-            <div>
-                <button class="header-button">projets</button>
-
-                <div class="roll-down-menu-content">
-                    <a href="">projet 1</a>
-                    <a href="">projet 2</a>
-                    <a class="lastone" href="">projet 3 </a>
-                </div>
-            </div>
-        </div>
- 
-        <div class="roll-down-menu">
-            <div>
-                <button class="header-button">dessins</button>
-
-                <div class="roll-down-menu-content">
-                    <a href="">projet 1</a>
-                    <a href="">projet 2</a>
-                    <a class="lastone" href="">projet 3 </a>
-                </div>
-            </div>
-        </div>
-
+        <a class="header-button" href="">photos</a>
+        <a class="header-button" href="">projets</a>
+        <a class="header-button" href="">dessins</a>
     </div>
 
-    <div class="right-stuff">
-    </div>
+    <!-- PLACE HOLDER TO CENTER THE BUTTONS -->
+    <div class="right-stuff"></div>
 
 </div>
 
@@ -81,6 +51,7 @@
         font-family: Rubik Mono One;
         font-size: 1.8rem;
         padding: 1.2vw;
+        text-decoration: none;
     }
 
     .center-buttons {
@@ -89,46 +60,15 @@
         flex-direction: row;
     }
 
-    .roll-down-menu {
-        position: relative;
-    }
-
-    .roll-down-menu-content {
-        display: none;
-        position: absolute;
-        width: 100%;
-        /* overflow: auto; */
-    }
-
-    .roll-down-menu:hover .roll-down-menu-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .roll-down-menu-content a {
-        width: 20vw;
-        background-color: #0009;
-        color: #DAC5A6;
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-family: Rubik Mono One;
-        padding: 0.7vw 1.5vw;
-        border: 2px solid #DAC5A650;
-        border-bottom: none;
-    }
-
-    .roll-down-menu-content .lastone{
-        border-bottom: 2px solid #DAC5A650;
-    }
-
+    /* FLEX */
     .burger-menu,
     .right-stuff {
         flex: 1;
     }
-
     .center-buttons {
         flex: 2;
     }
+    /* FLEX */
 
     .burger-menu .left-wondow {
         flex: 0;
@@ -172,6 +112,7 @@
 
 <script>
     var leftWindow = document.getElementById('leftWindow');
+
     var openBtn = document.getElementById("openBtn");
     var openBtn1 = document.getElementById("openBtn1");
     var openBtn2 = document.getElementById("openBtn2");
@@ -181,10 +122,9 @@
         if (e.target.id !== 'leftWindow') {
             if (e.target.id == 'openBtn' || e.target.id == 'openBtn1' || e.target.id == 'openBtn2' || e.target.id == 'openBtn3') {
                 leftWindow.classList.add("active");
-            } else if (e.target.id !== 'openBtn') {
+            } else {
                 leftWindow.classList.remove("active");
             }
         }
-
     }
 </script>
