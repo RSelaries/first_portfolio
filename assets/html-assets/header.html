@@ -1,10 +1,8 @@
 <div class="headerDiv">
     <!-- BURGER MENU WINDOW -->
     <div class="left-window" id="leftWindow">
-        <a class="home-button" href="../../index.html">home</a>
-        <a href="../../exercices/">exercices</a>
-        <a href=""></a>
-        <a href=""></a>
+        <div><a class="home-button" href="../../index.html" id="home-button">SELARIES RAPHAEL</a></div>
+        <div><a href="../../exercices/">exercices</a>   </div>
     </div>
 
     <!-- BURGER MENU BUTTON -->
@@ -72,13 +70,7 @@
     }
     /* FLEX */
 
-    .burger-menu .left-wondow {
-        flex: 0;
-    }
-
-    .burger-menu {
-    }
-
+    /* BURGER MENU */
     .burger-menu-button {
         width: fit-content;
         display: flex;
@@ -87,29 +79,63 @@
         cursor: pointer;
     }
 
-    .burger-menu-button span {
+    .burger-menu-button span {  /* TRAITS DU MENU BURGER */
         border-radius: 0.15rem;
         width: 2.5rem;
         height: 0.4rem;
         background-color: #DAC5A6;
     }
 
+    .left-window div {
+        display: flex;
+        flex-direction: column;
+    }
     .left-window {
         top: 0;
-        z-index: 1;
         position: fixed;
         height: 100vh;
         width: 21rem;
-        background-color: #DAC5A688;
+        /* background-color: #DAC5A688; */
+
+        background-color: #DAC5A644;
+        backdrop-filter: blur(5px);
+        /* border: 1px solid #DAC5A688; */
+        border-left: none;
+        border-bottom: none;
 
         left: -21rem;
         transition: left 0.5s ease;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        padding: 16px 40px;
+    }
+
+    .left-window a {
+        text-decoration: none;
+        color: #DAC5A6;
+        font-family: Rubik Mono One;
+        font-size: 26px;
+        background-color: #4a210aaa;
+        padding: 8px 16px;
+    }
+
+    #home-button {
+        padding: 0;
+        background-color: #0000;
+        text-align: center;
+        border: none;
+        color: #4a210a;
+        font-size: 32px;
     }
     
-    .left-window.active {
+    .left-window.active {   /* OUVERTURE MENU BURGER */
         left: 0;
         transition: left 0.5s ease;
     }
+    /* BURGER MENU */
 </style>    
 
 <script>
