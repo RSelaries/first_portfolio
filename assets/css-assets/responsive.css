@@ -1,28 +1,22 @@
-:root {
-  font-size: 16px;
-}
 
-@media screen and (orientation: landscape) {
+@media screen {
+  :root { font-size: 16px; }
+  @media (min-width: 1px) and (max-width: 500px) {
+    :root { font-size: 24px; }
+  }
+  @media (min-width: 501) and (max-width: 700) {
+    :root { font-size: 19px;}
+  }
+  @media (min-width: 701px) and (max-width: 1100) {
+    :root { font-size: 16px;}
+  }
   @media (min-width: 1101px) and (max-width: 1300px) {
-    :root {
-      font-size: 19px;
-    }
+    :root { font-size: 19px; }
   }
   @media (min-width: 1301px) and (max-width: 1600px) {
-    :root {
-      font-size: 24px;
-    }
+    :root { font-size: 24px; }
   }
   @media (min-width: 1601px) {
-    :root {
-      font-size: 26px;
-    }
+    :root { font-size: 26px; }
   }
-}
-
-@media screen and (orientation: portrait) {
-  @media (min-width:) and (max-width) {
-    :root { font-size: px;}
-  }
-  
 }
