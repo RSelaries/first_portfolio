@@ -1,13 +1,12 @@
 @import url(../../assets/css-assets/reset.css);
 
-body {
-    background-color: #000;
+body body {
+    background-color: #fff;
 }
 
 .grid {
-    background: #EEE;
-  /*   max-width: 1200px; */
-  }
+    background-color: #000;
+}
 
 .grid:after {
     content: '';
@@ -16,6 +15,6 @@ body {
   }
 
 .grid-item {
-    width: 20vw;
+    width: 33.333333333333333vw;
     float: left;
 }
