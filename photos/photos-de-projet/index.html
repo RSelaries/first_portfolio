@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Photos Argentiques</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photos Argentiques</title>
 
-        <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous">
-        </script>
-        <script>
-            $(function () {
-                $("#header").load("../../assets/html-assets/header.html");
-                $("#footer").load("footer.html");
-            });
-        </script>
-    </head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("../../assets/html-assets/header.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
+  </head>
 
-<body>
+  <body>
     <div id="header"></div>
 
-            <figure> <img src="./assets/001.JPG"/> </figure>
-            <figure> <img src="./assets/002.JPG"/> </figure>
-            <figure> <img src="./assets/003.JPG"/> </figure>
-            <figure> <img src="./assets/004.JPG"/> </figure>
-            <figure> <img src="./assets/005.JPG"/> </figure>
-            <figure> <img src="./assets/006.JPG"/> </figure>
-            <figure> <img src="./assets/007.JPG"/> </figure>
-            <figure> <img src="./assets/008.JPG"/> </figure>
-            <figure> <img src="./assets/009.JPG"/> </figure>
-            <figure> <img src="./assets/010.JPG"/> </figure>
-            <figure> <img src="./assets/011.JPG"/> </figure>
-            <figure> <img src="./assets/012.JPG"/> </figure>
-            <figure> <img src="./assets/013.JPG"/> </figure>
-            <figure> <img src="./assets/014.JPG"/> </figure>
-            <figure> <img src="./assets/015.JPG"/> </figure>
-            <figure> <img src="./assets/016.JPG"/> </figure>
-            <figure> <img src="./assets/017.JPG"/> </figure>
-            <figure> <img src="./assets/018.JPG"/> </figure>
-            <figure> <img src="./assets/019.JPG"/> </figure>
-            <figure> <img src="./assets/020.JPG"/> </figure>
-            <figure> <img src="./assets/021.JPG"/> </figure>
-            <figure> <img src="./assets/022.JPG"/> </figure>
-
-</body>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <div class="grid">
+      <img class="grid-item" src="./assets/001.JPG" />
+      <img class="grid-item" src="./assets/002.JPG" />
+      <img class="grid-item" src="./assets/003.JPG" />
+      <img class="grid-item" src="./assets/004.JPG" />
+      <img class="grid-item" src="./assets/005.JPG" />
+      <img class="grid-item" src="./assets/006.JPG" />
+      <img class="grid-item" src="./assets/007.JPG" />
+      <img class="grid-item" src="./assets/008.JPG" />
+      <img class="grid-item" src="./assets/009.JPG" />
+      <img class="grid-item" src="./assets/010.JPG" />
+      <img class="grid-item" src="./assets/011.JPG" />
+      <img class="grid-item" src="./assets/012.JPG" />
+      <img class="grid-item" src="./assets/013.JPG" />
+      <img class="grid-item" src="./assets/014.JPG" />
+      <img class="grid-item" src="./assets/015.JPG" />
+      <img class="grid-item" src="./assets/016.JPG" />
+      <img class="grid-item" src="./assets/017.JPG" />
+      <img class="grid-item" src="./assets/018.JPG" />
+      <img class="grid-item" src="./assets/019.JPG" />
+      <img class="grid-item" src="./assets/020.JPG" />
+      <img class="grid-item" src="./assets/021.JPG" />
+      <img class="grid-item" src="./assets/022.JPG" />
+    </div>
+    <script>
+      var msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
+      msnry.layout();
+      for (const img of document.querySelectorAll(".grid-item")) {
+        img.onload = () => {
+            msnry.layout();
+        }
+      }
+    </script>
+  </body>
 </html>

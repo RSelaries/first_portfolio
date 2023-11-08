@@ -4,4 +4,18 @@ body {
     background-color: #000;
 }
 
+.grid {
+    background: #EEE;
+  /*   max-width: 1200px; */
+  }
 
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+.grid-item {
+    width: 20vw;
+    float: left;
+}
