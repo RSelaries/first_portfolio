@@ -1,22 +1,23 @@
 @import url(../assets/css-assets/reset.css);
 
-.horizontal {
-    display: flex;
-    flex-direction: row;
+.container {
+    display: grid;
+}
+
+.container { /* à transformer en responsive */
+    grid-template-columns: auto auto;
 }
 
 .photo-album-cover {
-    width: 50vw;
     height: 80vh;
     display: flex;
     align-items: flex-end;
-
     background-size: cover;
     background-position: 50%;
 }
 
 .filter {
-    width: 50vw;
+    width: 50%;
     height: 80%;
     background-color: #0004;
     position: absolute;
@@ -53,7 +54,7 @@
 }
 
 /* Demander au prof comment automatiser ça */
-#photos_argentiques { background-image: url(./assets/miniatures/photos_argentiques.jpg); }
-#photos_de_projets { background-image: url(./assets/miniatures/photos_de_projets.jpg); }
-#série_3_name { background-image: url(./assets/miniatures/série_3_name.jpg); }
-#série_4_name { background-image: url(./assets/miniatures/série_4_name.jpg); }
+#one { background-image: url(./assets/miniatures/photos_argentiques.jpg); }
+#two { background-image: url(./assets/miniatures/photos_de_projets.jpg); }
+#three { background-image: url(./assets/miniatures/série_3_name.jpg); }
+#four { background-image: url(./assets/miniatures/série_4_name.jpg); }
