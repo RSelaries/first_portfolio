@@ -4,12 +4,20 @@
     display: grid;
 }
 
-.container { /* à transformer en responsive */
-    grid-template-columns: auto auto;
+@media screen and (orientation: portrait) { 
+    .container { grid-template-columns: auto; }
+    .filter { width: 100%; }
+    :root { --album-height : 60vh; }
+}
+
+@media screen and (orientation: landscape) {
+    .container { grid-template-columns: auto auto; }
+    .filter { width: 50%; }
+    :root { --album-height : 80vh; }
 }
 
 .photo-album-cover {
-    height: 80vh;
+    height: var(--album-height);
     display: flex;
     align-items: flex-end;
     background-size: cover;
@@ -17,8 +25,7 @@
 }
 
 .filter {
-    width: 50%;
-    height: 80%;
+    height: var(--album-height);
     background-color: #0004;
     position: absolute;
     transition: all 0s;
