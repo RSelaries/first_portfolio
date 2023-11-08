@@ -47,10 +47,6 @@
         --header-left-window-text-color : #4a210aaa;
     }
 */
-
-    @media (max-width: 500px) { .headerDiv { }}
-    @media (min-width: 501px) { .headerDiv { }}
-
     .headerDiv {
         /* justify-content: space-between; */
         align-items: center;
@@ -82,7 +78,7 @@
             flex-direction: row;
         }
         .burger-menu-button { display: none;}
-        .logo { padding: 0; flex: 1; text-align: left;}
+        .logo { padding: 0; flex: 1; text-align: left; font-size: 1rem}
     }
     @media (max-width: 500px) {
         .center-buttons { display: none; }
@@ -93,7 +89,7 @@
             gap: 0.2rem;
             cursor: pointer;
         }
-        .logo {padding: 0.4rem 0;}
+        .logo {padding: 0.4rem 0; font-size: 0.8rem; }
         .burger-menu { flex: 1; text-align: center;}
     }
 
@@ -102,7 +98,6 @@
         text-decoration: none;
         color: var(--header-text-color);
         font-family: Rubik Mono One;
-        font-size: 0.7rem;
     }
 
     /* FLEX */
