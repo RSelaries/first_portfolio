@@ -1,15 +1,15 @@
 <div class="headerDiv">
     <!-- BURGER MENU WINDOW -->
-    <div class="left-window" id="leftWindow">
-        <div class="home-button"><a href="../../">SELARIES RAPHAEL</a></div>
+    <div class="left-window">
+        <div class="left-window-content" id="leftWindow">
+            <div class="home-button"><a href="../../">SELARIES RAPHAEL</a></div>
 
-        <!-- SI L'ECRAN EST TROP PETIT (COPIE DES .center-buttons)-->
-        <div class="other-button"><a href="../../photos">photos</a></div>
-        <div class="other-button"><a href="">projets</a></div>
-        <div class="other-button"><a href="">dessins</a></div>
-
-        <!-- MOUAIS -->
-        <!-- <div class="other-button"><a href="">exercices</a></div> -->
+            <!-- SI L'ECRAN EST TROP PETIT (COPIE DES .center-buttons)-->
+            <div class="other-button"><a href="../../photos">photos</a></div>
+            <div class="other-button"><a href="">projets</a></div>
+            <div class="other-button"><a href="">dessins</a></div>
+        </div>
+        <div class="left-window-close-div"></div>
     </div>
 
     <!-- BURGER MENU BUTTON -->
@@ -119,11 +119,11 @@
         background-color: var(--header-text-color);
     }
 
-    .left-window div {
+    .left-window-content div {
         display: flex;
         flex-direction: column;
     }
-    .left-window {
+    .left-window-content {
         top: 0;
         position: fixed;
         height: 100vh;
@@ -145,7 +145,7 @@
         align-items: center;
     }
 
-    .left-window .other-button a {
+    .left-window-content .other-button a {
         width: 10rem;
         text-decoration: none;
         color: var(--header-text-color);
@@ -155,7 +155,7 @@
         padding: 0.5rem 1rem;
     }
 
-    .left-window .home-button a {
+    .left-window-content .home-button a {
         padding: 0.7rem 0;
         background-color: #0000;
         text-align: center;
@@ -166,10 +166,11 @@
         font-family: Rubik Mono One;
     }
     
-    .left-window.active {   /* OUVERTURE MENU BURGER */
+    .left-window-content.active {   /* OUVERTURE MENU BURGER */
         left: 0;
         transition: left 0.5s ease;
     }
+
     /* BURGER MENU */
 </style>    
 
