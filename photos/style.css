@@ -38,9 +38,9 @@
     height: fit-content;
 
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1px;
-    font-size: 14px;
-    color: #DAC5A6;
+    letter-spacing: 0.07rem;
+    font-size: 0.65rem;
+    color: #e1d5c4;
 }
 
 .photo-album-name h1 {
@@ -49,7 +49,7 @@
 }
 
 .photo-album-cover .photo-album-name h1 {
-    padding: 8px 20px;
+    padding: 0 2rem;
 }
 
 /* Demander au prof comment automatiser ça */

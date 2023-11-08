@@ -19,3 +19,10 @@
     }
   }
 }
+
+@media screen and (orientation: portrait) {
+  @media (min-width:) and (max-width) {
+    :root { font-size: px;}
+  }
+  
+}
