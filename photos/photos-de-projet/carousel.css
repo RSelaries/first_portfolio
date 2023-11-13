@@ -5,7 +5,7 @@
 }
 
 /* body { overflow: hidden; } */
-.carousel img {display: none;}
+.carousel img { display: none; }
 .carousel * { display: none; }
 
 /* Carousel Container */
@@ -29,12 +29,12 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
     /* background-color: aqua; */
 }
 
 /* Next and Previous Buttons */
-.prev, .next {
+.prev, .next {  
     padding: 2rem 1rem;
     cursor: pointer;
     position: absolute;
