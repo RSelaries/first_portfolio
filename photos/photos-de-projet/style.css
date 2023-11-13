@@ -1,4 +1,5 @@
 @import url(../../assets/css-assets/reset.css);
+@import url(./carousel.css);
 
 body body {
     background-color: #fff;

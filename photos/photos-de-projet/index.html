@@ -36,28 +36,28 @@
 
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <div class="grid">
-            <img class="grid-item" src="./assets/low-res/001.jpg"/>
-            <img class="grid-item" src="./assets/low-res/002.jpg"/>
-            <img class="grid-item" src="./assets/low-res/003.jpg"/>
-            <img class="grid-item" src="./assets/low-res/004.jpg"/>
-            <img class="grid-item" src="./assets/low-res/005.jpg"/>
-            <img class="grid-item" src="./assets/low-res/006.jpg"/>
-            <img class="grid-item" src="./assets/low-res/007.jpg"/>
-            <img class="grid-item" src="./assets/low-res/008.jpg"/>
-            <img class="grid-item" src="./assets/low-res/009.jpg"/>
-            <img class="grid-item" src="./assets/low-res/010.jpg"/>
-            <img class="grid-item" src="./assets/low-res/011.jpg"/>
-            <img class="grid-item" src="./assets/low-res/012.jpg"/>
-            <img class="grid-item" src="./assets/low-res/013.jpg"/>
-            <img class="grid-item" src="./assets/low-res/014.jpg"/>
-            <img class="grid-item" src="./assets/low-res/015.jpg"/>
-            <img class="grid-item" src="./assets/low-res/016.jpg"/>
-            <img class="grid-item" src="./assets/low-res/017.jpg"/>
-            <img class="grid-item" src="./assets/low-res/018.jpg"/>
-            <img class="grid-item" src="./assets/low-res/019.jpg"/>
-            <img class="grid-item" src="./assets/low-res/020.jpg"/>
-            <img class="grid-item" src="./assets/low-res/021.jpg"/>
-            <img class="grid-item" src="./assets/low-res/022.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/001.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/002.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/003.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/004.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/005.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/006.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/007.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/008.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/009.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/010.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/011.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/012.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/013.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/014.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/015.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/016.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/017.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/018.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/019.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/020.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/021.jpg"/>
+            <img loading="lazy" class="grid-item" src="./assets/low-res/022.jpg"/>
         </div>
         <script>
             var msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
@@ -68,5 +68,54 @@
                 };
             }
         </script>
+
+        <!-- CAROUSEL - DISPLAYS ONLY WHEN AN IMAGE IS CLICKED -->
+        <div class="carousel">
+            <div class="carousel-img-container">
+                <div class="slide">
+                    <img class="slide-img" loading="lazy" src="./assets/high-res/001.JPG">
+                </div>
+    
+                <div class="slide">
+                    <img class="slide-img" loading="lazy" src="./assets/high-res/002.JPG">
+                </div>
+    
+                <div class="slide">
+                    <img class="slide-img" loading="lazy" src="./assets/high-res/003.JPG">
+                </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("slide");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
     </body>
 </html>
