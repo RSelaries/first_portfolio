@@ -4,9 +4,9 @@
     height: 100vh;
 }
 
-body { overflow: hidden; }
-/* .carousel img {display: none;} */
-/* .carousel * { display: none; } */
+/* body { overflow: hidden; } */
+.carousel img {display: none;}
+.carousel * { display: none; }
 
 /* Carousel Container */
 .carousel {
