@@ -8,7 +8,7 @@
             <div class="other-button"><a href="../../photos">photos</a></div>
             <div class="other-button"><a href="">vidéos</a></div>
             <div class="other-button"><a href="">dessins</a></div>
-            <div class="other-button"><a href="">design</a></div>
+            <div class="other-button"><a href="">projets</a></div>
         </div>
         <div class="left-window-close-div"></div>
     </div>
@@ -23,14 +23,14 @@
     </div>
 
     <!-- LOGO -->
-    <a class="logo" href="../../"><p>sela</p><p>ries</p></a>
+    <div class="logo"><a href="../../">sela</a><a href="../../">ries</a></div>
 
     <!-- CENTER BUTTONS -->
     <div class="center-buttons">
         <a class="header-button" href="../../photos">photos</a>
         <a class="header-button" href="">vidéos</a>
         <a class="header-button" href="">dessins</a>
-        <a class="header-button" href="">design</a>
+        <a class="header-button" href="">projets</a>
     </div>
 
     <!-- PLACE HOLDER TO CENTER THE BUTTONS -->
@@ -60,6 +60,7 @@
         padding: 0 0.5rem;
 
         z-index: 100;
+        user-select: none;
     }
 
     .headerDiv .header-button {
@@ -95,7 +96,9 @@
         .burger-menu { flex: 1; text-align: center;}
     }
 
-    .logo {
+    .logo { display: flex; flex-direction: column;}
+    .logo * {
+        width: fit-content;
         line-height: 0.8;
         text-decoration: none;
         color: var(--header-text-color);

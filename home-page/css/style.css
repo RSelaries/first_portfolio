@@ -10,9 +10,10 @@ section.welcome {
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
-    background-image: url(../../assets/images/010-2.jpg);
+    background-image: url(../../assets/images/home-page-image.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    user-select: none;
 }
 
 .welcome .left-content {
