@@ -44,3 +44,7 @@ section.welcome {
     }
     .welcome { background-position: 57% 50%; }
 }
+
+@media (min-width: 501px) and (orientation: portrait) {
+    .welcome { background-position: 50% 50%; }
+}
