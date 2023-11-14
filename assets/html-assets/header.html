@@ -177,19 +177,29 @@
 </style>    
 
 <script>
-    var leftWindow = document.getElementById('leftWindow');
+    let leftWindow = document.getElementById('leftWindow');
 
-    var openBtn = document.getElementById("openBtn");
-    var openBtn1 = document.getElementById("openBtn1");
-    var openBtn2 = document.getElementById("openBtn2");
-    var openBtn3 = document.getElementById("openBtn3");
+    let openBtn = document.getElementById("openBtn");
+    let openBtn1 = document.getElementById("openBtn1");
+    let openBtn2 = document.getElementById("openBtn2");
+    let openBtn3 = document.getElementById("openBtn3");
+
+    const disableLink = document.querySelectorAll(".disable-link");
 
     document.onclick = function(e) {
         if (e.target.id !== 'leftWindow') {
             if (e.target.id == 'openBtn' || e.target.id == 'openBtn1' || e.target.id == 'openBtn2' || e.target.id == 'openBtn3') {
                 leftWindow.classList.add("active");
+
+                disableLink.forEach(link => {
+                    link.style.pointerEvents = 'none';
+                });
             } else {
                 leftWindow.classList.remove("active");
+
+                disableLink.forEach(link => {
+                    link.style.pointerEvents = 'all';
+                });
             }
         }
     }
