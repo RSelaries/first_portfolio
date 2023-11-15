@@ -43,10 +43,14 @@ body { background-color: transparent; }
 
 #carousel-div {
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    top: 0px;
     z-index: 99;
     background-color: #0002;
     backdrop-filter: blur(7px);
 
-    /* display: none; */
+    display: none;
 }
+
+#carousel-div.carousel-active { display: block; }
+body.carousel-active { overflow: hidden ;}

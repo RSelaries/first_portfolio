@@ -39,29 +39,37 @@
         <div id="carousel-div"></div>
 
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <div class="grid">            
-            <img loading="lazy" class="grid-item" src="./assets/low-res/001.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/002.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/003.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/004.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/005.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/006.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/007.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/008.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/009.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/010.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/011.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/012.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/013.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/014.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/015.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/016.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/017.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/018.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/019.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/020.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/021.jpg"/>
-            <img loading="lazy" class="grid-item" src="./assets/low-res/022.jpg"/>
+        <div class="grid">
+            
+            <img
+                data-id="1"
+                onclick="
+                    document.getElementById('carousel-div').classList.add('carousel-active');
+                    document.body.classList.add('carousel-active');
+                    let index = Number.parseInt(event.currentTarget.dataset.id);
+                    showSlides(index);
+                "
+                loading="lazy"
+                class="grid-item"
+                src="./assets/low-res/001.jpg"
+            />
+            <script>
+                let grid = document.currentScript.parentElement;
+                let imgSrc = grid.querySelector("img");
+
+                let startIndex = 2;
+                let endIndex = 22;
+
+                for(let i = startIndex; i <= endIndex; i++) {
+                    /** @type{HTMLImageElement} */
+                    let imgClone = imgSrc.cloneNode(true);
+                    let imgIndex = i.toString().padStart(3, 0);
+                    imgClone.src = `./assets/low-res/${imgIndex}.jpg`
+                    imgClone.dataset.id = i
+                    grid.append(imgClone);
+                }
+            </script>
+
         </div>
         <script>
             var msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
