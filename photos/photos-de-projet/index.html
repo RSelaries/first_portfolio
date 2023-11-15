@@ -76,7 +76,7 @@
 
         </div>
         <script>
-            var msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
+            let msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
             msnry.layout();
             for (const img of document.querySelectorAll(".grid-item")) {
                 img.onload = () => {
