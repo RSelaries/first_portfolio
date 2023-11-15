@@ -1,8 +1,8 @@
 @import url(../../assets/css-assets/reset.css);
 
-body body {
-    background-color: #fff;
-}
+html { background-color: transparent; }
+
+body { background-color: transparent; }
 
 .grid {
     background-color: #000;
@@ -30,4 +30,23 @@ body body {
 
 @media (min-width: 1801px) {
     .grid-item { width: 20vw; }
+}
+
+.carousel-style {
+    border: none;
+    /* background-color: transparent; */
+    width: 100vw;
+    height: 100vh;
+
+    position: sticky;
+}
+
+#carousel-div {
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+    background-color: #0002;
+    backdrop-filter: blur(7px);
+
+    /* display: none; */
 }
