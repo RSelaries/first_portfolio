@@ -65,7 +65,7 @@
                     let imgClone = imgSrc.cloneNode(true);
                     let imgIndex = i.toString().padStart(3, 0);
                     imgClone.src = `./assets/low-res/${imgIndex}.jpg`
-                    imgClone.dataset.id = i
+                    imgClone.dataset.id = i;
                     grid.append(imgClone);
                 }
             </script>
