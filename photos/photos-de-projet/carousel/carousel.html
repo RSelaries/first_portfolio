@@ -110,7 +110,7 @@
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-        <img class="slide-image" src="./assets/low-res/001.jpg">
+        <img class="slide-image" src="./assets/high-res/001.jpg">
     </div>
 
     <script>
@@ -124,7 +124,7 @@
         for (let i = startIndex1; i <= endIndex1 ; i++) {
         let mySlidesClone = mySlides.cloneNode(true);
         let imgIndex1 = i.toString().padStart(3, 0);
-        mySlidesClone.querySelector('.slide-image').src = `./assets/low-res/${imgIndex1}.jpg`
+        mySlidesClone.querySelector('.slide-image').src = `./assets/high-res/${imgIndex1}.jpg`
 
         slideshowContainer.append(mySlidesClone);
     }

@@ -44,11 +44,9 @@
             <img
                 data-id="1"
                 onclick="
-                    let index = Number.parseInt(event.currentTarget.dataset.id);
+                    slideIndex = Number.parseInt(event.currentTarget.dataset.id);
                     document.getElementById('carousel-div').classList.add('carousel-active');
                     document.body.classList.add('carousel-active');
-                    
-                    slideIndex = index;
                     
                     showSlides(slideIndex);
                     isCarouselActive = true;
@@ -56,7 +54,7 @@
                 "
                 loading="lazy"
                 class="grid-item"
-                src="./assets/high-res/001.jpg"
+                src="./assets/low-res/001.jpg"
             />
             <!-- duplicate the <img> element up to 'enIndex' and increment the number in '004.png' -->
             <script> 
@@ -70,7 +68,7 @@
                     /** @type{HTMLImageElement} */
                     let imgClone = imgSrc.cloneNode(true);
                     let imgIndex = i.toString().padStart(3, 0);
-                    imgClone.src = `./assets/high-res/${imgIndex}.jpg`
+                    imgClone.src = `./assets/low-res/${imgIndex}.jpg`
                     imgClone.dataset.id = i;
                     grid.append(imgClone);
                 }
