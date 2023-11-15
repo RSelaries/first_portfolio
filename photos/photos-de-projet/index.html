@@ -54,7 +54,7 @@
                 "
                 loading="lazy"
                 class="grid-item"
-                src="./assets/low-res/001.jpg"
+                src="./assets/low-res/001.webp"
             />
             <!-- duplicate the <img> element up to 'enIndex' and increment the number in '004.png' -->
             <script> 
@@ -68,7 +68,7 @@
                     /** @type{HTMLImageElement} */
                     let imgClone = imgSrc.cloneNode(true);
                     let imgIndex = i.toString().padStart(3, 0);
-                    imgClone.src = `./assets/low-res/${imgIndex}.jpg`
+                    imgClone.src = `./assets/low-res/${imgIndex}.webp`
                     imgClone.dataset.id = i;
                     grid.append(imgClone);
                 }
