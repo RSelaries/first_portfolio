@@ -39,7 +39,8 @@
     /* Slide Images */
     .slide-image {
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
+        max-height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -112,38 +113,41 @@
         <img class="slide-image" src="./assets/low-res/001.jpg">
     </div>
 
-    <!-- <script>
+    <script>
         let slideshowContainer = document.querySelector('.slideshow-container');
         let mySlides = document.querySelector('.mySlides');
+        let slideImage = document.querySelector('.slide-image');
 
         let startIndex1 = 2;
-        let endIndex1 = 22;
+        let endIndex1 = endIndex;
 
-        for (let i = 0; i <=5 ; i++) {
-            console.log(i);
-            let mySlidesClone = mySlides.cloneNode(true);
-            let imgIndex1 = i.toString().padStart(3, 0);
-            mySlidesClone.querySelector('.slide-image').src = `./assets/low-res/${imgIndex}.jpg`
+        for (let i = startIndex1; i <= endIndex1 ; i++) {
+        let mySlidesClone = mySlides.cloneNode(true);
+        let imgIndex1 = i.toString().padStart(3, 0);
+        mySlidesClone.querySelector('.slide-image').src = `./assets/low-res/${imgIndex1}.jpg`
 
-            slideshowContainer.append(mySlidesClone);
-        }
-    </script> -->
+        slideshowContainer.append(mySlidesClone);
+    }
+    </script>
 
-    <div class="mySlides fade">
+    <!-- <div class="mySlides fade">
         <img class="slide-image" src="./assets/low-res/002.jpg">
     </div>
 
     <div class="mySlides fade">
         <img class="slide-image" src="./assets/low-res/003.jpg">
-    </div>
+    </div> -->
 
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
+    <a class="prev prevNextButtons" onclick="plusSlides(-1)">❮</a>
+    <a class="next prevNextButtons" onclick="plusSlides(1)">❯</a>
 </div>
 
 <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    let slideIndex;
+
+    document.onclick = function(e) {
+        showSlides(slideIndex);
+    }
 
     function plusSlides(n) {
         showSlides((slideIndex += n));
@@ -166,11 +170,23 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
-        // slides[n].style.display = "flex";
+        console.log('image '+slideIndex+' is currently shown');
     }
 
-    document.onclick = function(e) {
-        if(e.target = 'slide-image') {
+    // function to close the slidshow
+    isCarouselActive = false;
+
+    document.onclick = function(e) {    
+        slideImg = document.querySelector('.slide-image');
+        prevNextButtons = document.querySelectorAll('.prevNextButtons')
+
+        if(isCarouselActive === true
+        && e.target.classList.contains('slide-image') === false
+        && e.target.classList.contains('prevNextButtons') === false
+        && e.target.classList.contains('grid-item') === false
+        ){
+            document.getElementById('carousel-div').classList.remove('carousel-active');
+            document.body.classList.remove('carousel-active');
         }
     }
 </script>
