@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="gradient-container">
+            <div class="gradient gradient-1"></div>
+            <div class="gradient gradient-2"></div>
+            <div class="gradient gradient-3"></div>
+        </div>
+
+        <style>
+            @import url(../../assets/css-assets/reset.css);
+
+            html { background-color: black; }
+
+            .gradient-container {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                padding: 4rem;
+            }
+
+            .gradient {
+                --size: 360px;
+                width: var(--size);
+                height: var(--size);
+                background-color: #f00;
+            }
+
+            .gradient-1 { background-image: linear-gradient(
+                60deg,
+                rgb(44, 6, 39),
+                rgb(37, 3, 3
+            ));}
+
+            .gradient-2 { background-image: linear-gradient(
+                150deg,
+                rgb(44, 6, 39),
+                rgb(22, 3, 37)
+            );}
+
+            .gradient-3 { background-image: radial-gradient(  
+                rgb(5, 23, 73),
+                rgb(10, 4, 35)
+            );}
+        </style>
+    </body>
+</html>

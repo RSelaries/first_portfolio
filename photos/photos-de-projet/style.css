@@ -20,10 +20,14 @@ body body {
     .grid-item { width: 50vw; }
 }
 
-@media (min-width: 501px) and (max-width: 1800px) {
+@media (min-width: 501px) and (max-width: 1100px) {
     .grid-item { width: 33.333333333333333vw; }
 }
 
-@media (min-width: 1801px) {
+@media (min-width: 1101px) and (max-width: 1800px) {
     .grid-item { width: 25vw; }
+}
+
+@media (min-width: 1801px) {
+    .grid-item { width: 20vw; }
 }
