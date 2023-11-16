@@ -1,0 +1,56 @@
+@import url(../../assets/css-assets/reset.css);
+
+html { background-color: transparent; }
+
+body { background-color: transparent; }
+
+.grid {
+    background-color: #000;
+}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-item { float: left; }
+
+@media (max-width: 500px) {
+    .grid-item { width: 50vw; }
+}
+
+@media (min-width: 501px) and (max-width: 1100px) {
+    .grid-item { width: 33.333333333333333vw; }
+}
+
+@media (min-width: 1101px) and (max-width: 1800px) {
+    .grid-item { width: 25vw; }
+}
+
+@media (min-width: 1801px) {
+    .grid-item { width: 20vw; }
+}
+
+.carousel-style {
+    border: none;
+    /* background-color: transparent; */
+    width: 100vw;
+    height: 100vh;
+
+    position: sticky;
+}
+
+#carousel-div {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    background-color: #0002;
+    backdrop-filter: blur(7px);
+
+    display: none;
+}
+
+#carousel-div.carousel-active { display: block; }
+body.carousel-active { overflow: hidden ;}
