@@ -7,13 +7,13 @@
 @media (max-width: 500px) { 
     .container { grid-template-columns: auto; }
     .filter { width: 100%; background-color: #0000; }
-    :root { --album-height : 60vh; --album-width : 100vw; }
+    :root { --album-height : 90vw; --album-width : 100vw; }
 }
 
 @media (min-width: 501px) {
     .container { grid-template-columns: auto auto; }
     .filter { width: 50%; background-color: #0004; }
-    :root { --album-height : 80vh; --album-width : 50vw; }
+    :root { --album-height : 45vw; --album-width : 50vw; }
 }
 
 .photo-album-cover {
