@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vidéos</title>
+
+        <link rel="stylesheet" href="./style.css" />
+
+        <!-- Load Header and Footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../assets/html-assets/header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
+
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #0009;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #fdf8f1;
+                --header-left-window-text-color: #000a;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="grid">
+
+            <div class="project one">
+                    <div class="project-second-image">
+                        <div class="project-text">
+                            <h1 class="project-name">Visualizer</h1>
+                            <p class="description">Boucle vidéo illustrant le titre<br>Let it Happen - Tame Impala</p>
+                            <p class="date">2023</p>
+                        </div>
+                    </div>
+                    <a href="#" class="project-image"></a>
+            </div>
+
+            <div class="project two">
+                <div class="project-second-image">
+                    <div class="project-text">
+                        <h1 class="project-name">Clocks around the world</h1>
+                        <p class="description">Motion design</p>
+                        <p class="date">2023</p>
+                    </div>
+                </div>
+                <a href="#" class="project-image"></a>
+        </div>
+
+        </div>
+    </body>
+</html>
