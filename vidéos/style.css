@@ -1,37 +1,21 @@
 @import url(../assets/css-assets/reset.css);
-
-:root {
-    --gap-between-projects: 1.5vw;
-    --half-gap-between-projects: calc( var(--gap-between-projects) / 2 );
-    --project-size: calc(50vw - var(--half-gap-between-projects) );
-    /* --image-width: 47.75vw; */
-    --image-width: calc( var(--project-size) - var(--gap-between-projects) );
-    --image-height: calc(40vw - var(--gap-between-projects) );
-}
+@import url(./project-specific-style.css);
+@import url(./project-responsive.css);
 
 html {
     background-color: #000;
-
-    
 }
 
 .grid {
     width: 100vw;
     display: grid;
     padding-top: 3rem;
-    padding-left: 1.5vw;
-    grid-template-columns: repeat(2, auto);
 }
 
 .project {
-    /* background-color: aqua; */
     display: flex;
     align-items: flex-end;
-    /* width: 49.25vw; */
-    /* width: calc(var(--gap-between-projects / 2) ); */
-    height: 40vw;
-    padding-right: 1.5vw;
-    padding-bottom: 1.5vw;
+    padding-bottom: var(--gap-between-projects);
     position: relative;
 }
 
@@ -45,24 +29,27 @@ html {
 .project * { background-size: cover; }
 
 .project-image {
+    display: flex;
     position: absolute;
-    width: var(--image-width);
-    height: var(--image-height);
     background-position: 50% 50%;
-    opacity: 1;
-
-    transition: all 0s;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 6rem;
 }
 
 .project-second-image {
     position: absolute;
     flex-direction: column;
-    width: var(--image-width);
-    height: var(--image-height);
     background-position: 50% 50%;
 }
 
 .project-image:hover { opacity: 0; transition: all 0.4s; }
+.project-image.smartphone-hover { opacity: 0; transition: all 0.4s; }
 
 .project-text {
     padding: 2% 2.5%;
@@ -81,14 +68,6 @@ html {
     padding-bottom: 0.3rem;
 }
 
-.project-second-image p.description { color: #aca59c; }
-
-.one .project-image { background-image: url(https://ipma.world/app/uploads/2015/09/Dollarphotoclub_65655745-1-1.jpg); }
-.two .project-image { background-image: url(./assets/miniatures/Clocks-around-the-world.png); }
-.three .project-image { background-image: url(https://www.ntaskmanager.com/wp-content/uploads/2020/02/What-is-a-Project-1-scaled.jpg); }
-.four .project-image { background-image: url(https://149695847.v2.pressablecdn.com/wp-content/uploads/2020/01/top-10-DS-projects.png); }
-
-.one .project-second-image { background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEzbvSzlmb8d-_0-OCUKBW3ZGkEdOVSGoyUw&usqp=CAU); }
-.two .project-second-image { background-image: url(https://img.youtube.com/vi/TV-KQ6iBIXQ/0.jpg); }
-.three .project-second-image { background-image: url(https://www.leparisien.fr/resizer/QcMcFqtG_pmes2n_fu2qRARyXXQ=/arc-anglerfish-eu-central-1-prod-leparisien/public/BG2SY4M3I3A7FAVYMRG5UH6DV4.jpg); }
-.four .project-second-image { background-image: url(https://cdn-s-www.dna.fr/images/30112785-43ee-4b7c-80da-22accc13640d/NW_raw/ouz-ram-codio-etudiant-haitien-inscrit-en-licence-de-sciences-politiques-a-l-universite-de-haute-alsace-s-apprete-a-passer-un-deuxieme-noel-a-mulhouse-ce-24-decembre-il-quittera-sa-chambre-d-etudiant-pour-aller-reveillonner-chez-un-ami-photo-l-alsace-cecile-fellmann-1608658211.jpg); }
+.project-second-image p.description {
+    color: #aca59c;
+}

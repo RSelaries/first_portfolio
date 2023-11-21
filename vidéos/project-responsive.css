@@ -1,0 +1,60 @@
+@media (max-width: 500px) { /* On Smartphones */
+    :root {
+        --gap-between-projects: 4vw;
+        --project-size: 100vw;
+        /* --image-width: 47.75vw; */
+        --image-width: calc( var(--project-size) - var(--gap-between-projects) );
+        --image-height: calc(40vw - var(--gap-between-projects) );
+    }
+
+    .grid {
+        padding-left: 0;
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .project {
+        height: 80vw;
+        padding-right: 0;
+    }
+
+    .project-second-image {
+        width: var(--project-size);
+        height: calc(80vw - var(--gap-between-projects) );
+    }
+
+    .project-image {
+        width: var(--project-size);
+        height: calc(80vw - var(--gap-between-projects) );
+    }
+}
+
+@media (min-width: 501px) { /* On Desktop */
+    :root {
+        --gap-between-projects: 1.5vw;
+        --half-gap-between-projects: calc( var(--gap-between-projects) / 2 );
+        --project-size: calc(50vw - var(--half-gap-between-projects) );
+        /* --image-width: 47.75vw; */
+        --image-width: calc( var(--project-size) - var(--gap-between-projects) );
+        --image-height: calc(40vw - var(--gap-between-projects) );
+    }
+
+    .grid {
+        padding-left: 1.5vw;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .project {
+        height: 40vw;
+        padding-right: var(--gap-between-projects);
+    }
+
+    .project-second-image {
+        width: var(--image-width);
+        height: var(--image-height);
+    }
+
+    .project-image {
+        width: var(--image-width);
+        height: var(--image-height);
+    }
+}

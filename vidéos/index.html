@@ -44,7 +44,9 @@
                             <p class="date">2023</p>
                         </div>
                     </div>
-                    <a href="#" class="project-image"></a>
+                    <a href="#" class="project-image" ontouchstart="hoverForSmartphone('one');">
+                        <div>Visualizer</div>
+                    </a>
             </div>
 
             <div class="project two">
@@ -59,5 +61,16 @@
         </div>
 
         </div>
+
+        <script>
+            function hoverForSmartphone(projectNumber, isTrue) {
+                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1];
+                projectImage.classList.add('smartphone-hover');
+
+                document.ontouchend = (event) => {
+                    projectImage.classList.remove('smartphone-hover');
+                }
+            }
+        </script>
     </body>
 </html>
