@@ -1,5 +1,40 @@
 @import url(../../assets/css-assets/reset.css);
 
+.vidéos {
+    color: #E1A52F !important;
+}
+
 html {
-    background-color: black;
+    background-color: #0A0A0A;
+    color: #F1E7D9;
+    font-family: 'Teko', sans-serif;
+}
+
+.page-title {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #E1A52F;
+    font-size: 9vw;
+}
+
+.vertical-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-flow .basic-text {
+    width: 50vw;
+}
+
+.basic-text h2 {
+    text-transform: uppercase;
+    color: #FFE1A7;
+    font-size: 4rem;
+}
+
+.basic-text p {
+    font-size: 1.8rem;
 }
