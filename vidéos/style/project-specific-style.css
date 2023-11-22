@@ -1,11 +1,11 @@
 /* Visualizer =========================================================================== */
-.one .project-second-image { background-image: url(./assets/miniatures/Visualizer2.gif); }
+.one .project-second-image { background-image: url(../assets/miniatures/Visualizer2.gif); }
 .one .project-image {
-    background-image: url(./assets/miniatures/Visualizer1.gif);
+    background-image: url(../assets/miniatures/Visualizer1.gif);
     color: #0000;
 }
 .one .project-image div {
-    background-image: url(./assets/miniatures/Visualizer3.gif);
+    background-image: url(../assets/miniatures/Visualizer3.gif);
     background-position: 50% 50%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -28,5 +28,5 @@
 
 
 /* Vidéo 2 =========================================================================== */
-.two .project-image { background-image: url(./assets/miniatures/Clocks-around-the-world.png); }
+.two .project-image { background-image: url(../assets/miniatures/Clocks-around-the-world.png); }
 .two .project-second-image { background-image: url(https://img.youtube.com/vi/TV-KQ6iBIXQ/0.jpg); }

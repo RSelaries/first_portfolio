@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LIH - Visualizer</title>
+
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="icon"
+            href="../../assets/images/icon.png"
+            type="image/x-icon"
+        />
+
+        <!-- Load Header and Footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvA²k/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../../assets/html-assets/header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
+
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #0009;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #fdf8f1;
+                --header-left-window-text-color: #000a;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+    </body>
+</html>
