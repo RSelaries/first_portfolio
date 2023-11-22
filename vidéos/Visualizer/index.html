@@ -80,6 +80,48 @@
             <div class="basic-text">
                 <h2>recherches</h2>
             </div>
+            <div class="recherches">
+                <video class="videos" src="./assets/recherche vidéo 1.mp4" loop></video>
+                <div class="video-overlay">
+                    <div class="play-pause-button" onclick="playPause()"></div>
+                    <div class="mute-unmute-button"></div>
+                </div>
+                <div class="deux-trucs">
+                    <img src="./assets/Visualizer.gif">
+                    <div></div>
+                </div>
+                <video class="videos" src="./assets/Recherche Graphique 3.mp4" autoplay muted loop></video>
+            </div>
+
+            <div class="basic-text">
+                <h2>final</h2>
+            </div>
         </div>
+
+        <script>
+            let isPlay = false
+            let displayPlay = document.getElementsByClassName('video-overlay')[0]
+            let displayPlay1 = document.getElementsByClassName('video-overlay')[0].children
+            console.log('Les enfants de .video-overlay : '+displayPlay1)
+
+            function playPause() {
+                console.log("l'état de isPlay : "+isPlay)
+                if(isPlay === false) {
+                    displayPlay.classList.add('displayPlay')
+                    for(let i = 0; i < displayPlay1.length; i++) {
+                        displayPlay1[i].classList.add('displayPlay');
+                        console.log("ok c'est bon : "+i);
+                    }
+                    isPlay = true;
+                } else { 
+                    displayPlay.classList.remove('displayPlay')
+                    for(let i = 0; i < displayPlay1.length; i++) {
+                        displayPlay1[i].classList.remove('displayPlay');
+                        console.log("c'est ok pour :  "+i);
+                    }
+                    isPlay = false;
+                }
+            }
+        </script>
     </body>
 </html>

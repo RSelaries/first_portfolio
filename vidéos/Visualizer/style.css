@@ -120,3 +120,92 @@ html {
     opacity: 1;
     cursor: pointer;
 }
+
+.recherches {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+}
+
+.recherches img { width: 25vw; border-radius: 0.3vw;}
+.recherches .deux-trucs div { width: 25vw; border-radius: 0.3vw;}
+.recherches .videos { width: 20vw; border-radius: 0.3vw; }
+
+.recherches div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.recherches .deux-trucs {
+    position: relative;
+}
+
+.recherches div.deux-trucs div {
+    width: 25vw;
+    height: 100%;
+    background-image: url(./assets/Visualizer1.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: aqua;
+}
+
+.recherches .video-overlay {
+    box-sizing: border-box;
+    border: 0.1vw solid #444;
+    position: absolute;
+    width: 20vw;
+    aspect-ratio: 9 / 16;
+    background-color: #0000;
+    border-radius: 0.3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.recherches .video-overlay:hover {
+    border: 0.1vw solid #888;
+}
+
+.recherches .video-overlay .play-pause-button {
+    width: 6vw;
+    height: 6vw;
+    background-image: url(../../assets/images/icones/play\ 888.png);
+    background-size: cover;
+}
+
+.recherches .video-overlay .play-pause-button:hover {
+    background-image: url(../../assets/images/icones/play\ fff.png);
+}
+
+.recherches .video-overlay .mute-unmute-button {
+    width: 3vw;
+    height: 3vw;
+    background-image: url(../../assets/images/icones/mute\ 888.png);
+    background-size: cover;
+    margin: 0.8vw;
+    display: none;
+}
+
+.recherches .video-overlay .mute-unmute-button:hover {
+    background-image: url(../../assets/images/icones/mute\ fff.png);
+}
+
+.recherches .video-overlay .play-pause-button.displayPlay {
+    background-image: url(../../assets/images/icones/pause\ 888.png);
+    width: 3vw;
+    height: 3vw;
+    margin: 0.8vw;
+}
+
+.recherches .video-overlay .play-pause-button.displayPlay:hover { background-image: url(../../assets/images/icones/pause\ fff.png); }
+
+.recherches .video-overlay .mute-unmute-button.displayPlay {
+    display: block;
+}
+
+.recherches .video-overlay.displayPlay {
+    align-items: flex-end;
+    justify-content: space-between;
+}
