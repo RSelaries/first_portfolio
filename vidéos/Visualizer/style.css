@@ -32,9 +32,15 @@ html {
 .basic-text h2 {
     text-transform: uppercase;
     color: #FFE1A7;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .basic-text p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    text-align: justify;
+}
+
+.basic-text p span {
+    color: #E1A52F;
 }

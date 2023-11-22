@@ -1,5 +1,9 @@
 @import url(../assets/css-assets/reset.css);
 
+.photos {
+    color: rgb(46, 127, 164)!important;
+}
+
 .container {
     display: grid;
 }
