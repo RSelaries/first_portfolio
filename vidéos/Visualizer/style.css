@@ -30,6 +30,7 @@ html {
 }
 
 .basic-text h2 {
+    padding-top: 2rem;
     text-transform: uppercase;
     color: #FFE1A7;
     font-size: 2.5rem;
@@ -43,4 +44,79 @@ html {
 
 .basic-text p span {
     color: #E1A52F;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+}
+
+.left-images {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 40vw;
+    gap: 1.5vw;
+}
+
+.left-images .one {
+    width: 100%;
+    height: 59.25%;
+    background-image: url(./assets/evangelion.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.left-images .two {
+    width: 100%;
+    height: 39.25%;
+    background-image: url(./assets/control.jpg);
+    background-size: cover;
+}
+
+.middle-images {
+    width: 20vw;
+    height: 40vw;
+    background-image: url(./assets/stairs.jpg);
+    background-position: 35%;
+}
+
+.right-images {
+    width: 20vw;
+    height: 40vw;
+    background-size: 77vw;
+    background-position: 22% 0%;
+    background-image: url(./assets/door.jpg);
+}
+
+.image {
+    text-transform: uppercase;
+    font-size: 5vw;
+    border-radius: 0.3vw;
+    color: #E1A52F;
+    font-weight: 700;
+    line-height: 80%;
+}
+
+.image .filter {
+    width: 100%;
+    height: 100%;
+    background-color: #000d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.two.image .filter {
+    background-color: #000a;
+}
+
+.image .filter:hover {
+    text-decoration: none;
+    color: #E1A52F;
+    opacity: 1;
+    cursor: pointer;
 }
