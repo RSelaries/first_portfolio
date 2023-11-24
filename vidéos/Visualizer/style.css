@@ -11,12 +11,10 @@ html {
 }
 
 .page-title {
-    padding-top: 1.5rem;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     color: #E1A52F;
-    font-size: 9vw;
 }
 
 .vertical-flow {
@@ -25,9 +23,7 @@ html {
     align-items: center;
 }
 
-.vertical-flow .basic-text {
-    width: 50vw;
-}
+
 
 .basic-text h2 {
     padding-top: 2rem;
@@ -48,16 +44,15 @@ html {
 
 .images {
     display: flex;
-    flex-direction: row;
-    gap: 1.5vw;
+    gap: var(--gap-size);
 }
 
 .left-images {
     display: flex;
     flex-direction: column;
-    width: 25vw;
-    height: 40vw;
-    gap: 1.5vw;
+    width: var(--image-width-2);
+    height: calc(var(--image-width-1) * 2);
+    gap: var(--gap-size);
 }
 
 .left-images .one {
@@ -76,16 +71,15 @@ html {
 }
 
 .middle-images {
-    width: 20vw;
-    height: 40vw;
+    width: var(--image-width-1);
+    height: calc(var(--image-width-1) * 2);
     background-image: url(./assets/stairs.jpg);
     background-position: 35%;
 }
 
 .right-images {
-    width: 20vw;
-    height: 40vw;
-    background-size: 77vw;
+    width: var(--image-width-1);
+    height: calc(var(--image-width-1) * 2);
     background-position: 22% 0%;
     background-image: url(./assets/door.jpg);
 }
@@ -93,13 +87,14 @@ html {
 .image {
     text-transform: uppercase;
     font-size: 5vw;
-    border-radius: 0.3vw;
+    border-radius: var(--borderRadius);
     color: #E1A52F;
     font-weight: 700;
     line-height: 80%;
 }
 
 .image .filter {
+    border-radius: var(--borderRadius);
     width: 100%;
     height: 100%;
     background-color: #000d;
@@ -123,18 +118,17 @@ html {
 
 .recherches {
     display: flex;
-    flex-direction: row;
-    gap: 1.5vw;
+    gap: var(--gap-size);
 }
 
-.recherches img { width: 25vw; border-radius: 0.3vw;}
-.recherches .deux-trucs div { width: 25vw; border-radius: 0.3vw;}
-.recherches .videos { width: 20vw; border-radius: 0.3vw; }
+.recherches img { width: var(--image-width-2); border-radius: var(--borderRadius);}
+.recherches .deux-trucs div { width: var(--image-width-2); border-radius: var(--borderRadius);}
+.recherches .videos { width: var(--image-width-1); border-radius: var(--borderRadius); }
 
 .recherches div {
     display: flex;
     flex-direction: column;
-    gap: 1.5vw;
+    gap: var(--gap-size);
 }
 
 .recherches .deux-trucs {
@@ -142,8 +136,7 @@ html {
 }
 
 .recherches div.deux-trucs div {
-    width: 25vw;
-    height: 100%;
+    width: var(--image-width-2);
     background-image: url(./assets/Visualizer1.gif);
     background-size: cover;
     background-position: 50% 50%;
@@ -154,10 +147,10 @@ html {
     box-sizing: border-box;
     border: 0.1vw solid #444;
     position: absolute;
-    width: 20vw;
+    width: var(--image-width-1);
     aspect-ratio: 9 / 16;
     background-image: url(./assets/recherche\ graphique3img.jpg);
-    border-radius: 0.3vw;
+    border-radius: var(--borderRadius);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -220,7 +213,40 @@ html {
 }
 
 iframe.youtube-visualizer {
-    width: calc(20vw + 20vw + 25vw + 1.5vw + 1.5vw);
-    border-radius: 0.3vw;
     aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 500px) {
+    :root {
+        --image-width-1 : 80vw;
+        --image-width-2 : var(--image-width-1);
+        --borderRadius : 2vw;
+        --gap-size: 4vw;
+    }
+    iframe.youtube-visualizer { width: 100vw; border-radius: 0; }
+    .vertical-flow .basic-text { width: 90vw; }
+    .page-title { font-size: 10vw; padding-top: 3rem; }
+    .images { flex-direction: column; }
+    .recherches { flex-direction: column; }
+    .recherches .deux-trucs div { height: 60vw; }
+    .right-images { background-size: 320vw; }
+}
+
+@media (min-width: 501px) {
+    :root {
+        --image-width-1 : 20vw;
+        --image-width-2 : 25vw;
+        --borderRadius : 0.3vw;
+        --gap-size: 1.5vw;
+    }
+    iframe.youtube-visualizer {
+        width: calc(var(--image-width-1) + var(--image-width-1) + var(--image-width-2) + 1.5vw + 1.5vw);
+        border-radius: var(--borderRadius);
+    }
+    .vertical-flow .basic-text { width: 50vw; }
+    .page-title { font-size: 9vw; padding-top: 1.5rem; }
+    .images { flex-direction: row; }
+    .recherches { flex-direction: row; }
+    .recherches .deux-trucs div { height: 100%; }
+    .right-images { background-size: 77vw; }
 }
