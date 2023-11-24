@@ -81,10 +81,10 @@
                 <h2>recherches</h2>
             </div>
             <div class="recherches">
-                <video class="videos" src="./assets/recherche vidéo 1.mp4" loop></video>
+                <video class="videos" src="./assets/recherche vidéo 1.mp4" loop muted></video>
                 <div class="video-overlay">
                     <div class="play-pause-button" onclick="playPause()"></div>
-                    <div class="mute-unmute-button"></div>
+                    <div class="mute-unmute-button" onclick="muteUnmute()"></div>
                 </div>
                 <div class="deux-trucs">
                     <img src="./assets/Visualizer.gif">
@@ -98,6 +98,17 @@
             </div>
         </div>
 
+        <div class="youtube-visualizer">
+            <iframe
+                class="youtube-visualizer"
+                src="https://www.youtube.com/embed/xpmkGxxlwag?si=m4bsPEk-EBtx1rBm"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+        </div>
+
         <script>
             let isPlay = false
             let displayPlay = document.getElementsByClassName('video-overlay')[0]
@@ -107,10 +118,12 @@
             function playPause() {
                 console.log("l'état de isPlay : "+isPlay)
                 if(isPlay === false) {
-                    displayPlay.classList.add('displayPlay')
+                    displayPlay.classList.add('displayPlay');
+                    displayPlay.style.backgroundImage = 'none';
                     for(let i = 0; i < displayPlay1.length; i++) {
                         displayPlay1[i].classList.add('displayPlay');
                         console.log("ok c'est bon : "+i);
+                        document.getElementsByClassName('recherches')[0].children[0].play()
                     }
                     isPlay = true;
                 } else { 
@@ -118,8 +131,23 @@
                     for(let i = 0; i < displayPlay1.length; i++) {
                         displayPlay1[i].classList.remove('displayPlay');
                         console.log("c'est ok pour :  "+i);
+                        document.getElementsByClassName('recherches')[0].children[0].pause()
                     }
                     isPlay = false;
+                }
+            }
+
+            let isMute = true
+            let videoMuted = document.getElementsByClassName('recherches')[0].children[0]
+            function muteUnmute() {
+                if(isMute === true) {
+                    videoMuted.muted = false
+                    isMute = false
+                    document.getElementsByClassName('mute-unmute-button')[0].classList.add('displayMute')
+                } else {
+                    videoMuted.muted = true
+                    isMute = true
+                    document.getElementsByClassName('mute-unmute-button')[0].classList.remove('displayMute')
                 }
             }
         </script>
