@@ -5,10 +5,10 @@
             <div class="home-button"><a href="../../">SELARIES RAPHAEL</a></div>
 
             <!-- SI L'ECRAN EST TROP PETIT (COPIE DES .center-buttons)-->
+            <div class="other-button"><a href="../../projets">projets</a></div>
             <div class="other-button"><a href="../../photos">photos</a></div>
             <div class="other-button"><a href="../../vidéos/">vidéos</a></div>
             <div class="other-button"><a href="../../beaux-arts/">beaux<span>-</span>arts</a></div>
-            <div class="other-button"><a href="../../projets">projets</a></div>
         </div>
         <div class="left-window-close-div"></div>
     </div>
@@ -27,10 +27,11 @@
 
     <!-- CENTER BUTTONS -->
     <div class="center-buttons">
+        <a class="header-button projets" href="../../projets">projets</a>
+        <span class="tiret">-</span>
         <a class="header-button photos" href="../../photos">photos</a>
         <a class="header-button vidéos" href="../../vidéos">vidéos</a>
         <a class="header-button dessins" href="../../beaux-arts/">beaux<span>-</span>arts</a>
-        <a class="header-button projets" href="../../projets">projets</a>
     </div>
 
     <!-- PLACE HOLDER TO CENTER THE BUTTONS -->
@@ -122,6 +123,16 @@
 
     /* BURGER MENU */
     
+    .center-buttons {
+        align-items: center;
+    }
+
+    .center-buttons .tiret {
+        font-size: 0.8rem;
+        text-align: center;
+        font-family: Rubik Mono One;
+        /* margin-left: -0.6rem; */
+    }
 
     .burger-menu-button span {  /* TRAITS DU MENU BURGER */
         border-radius: 0.1rem;

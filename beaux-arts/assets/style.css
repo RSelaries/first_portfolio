@@ -12,7 +12,11 @@
 
 .headerDiv .dessins { color: #377d19 !important; }
 
-.html-background {
+html {
+    background-color: #cccccc;
+}
+
+/* .html-background {
     background-image: url(./miniatures/marée\ basse\ flou.png);
     background-size: cover;
     background-position: 50% 50%;
@@ -21,7 +25,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 1;
-}
+} */
 
 .container { display: grid; }
 

@@ -27,15 +27,6 @@ section.welcome {
     cursor: default;
 }
 
-@media (min-width: 501px) {
-    .welcome .left-content {
-        width: 50vw;
-        justify-content: center;
-        font-size: 1.5rem;
-    }
-    .welcome { background-position: 0 50%; }
-}
-
 @media (max-width: 500px) {
     .welcome .left-content {
         width: 80vw;
@@ -44,6 +35,24 @@ section.welcome {
         padding-top: 4rem;
     }
     .welcome { background-position: 57% 50%; }
+}
+
+@media (min-width: 501px) and (max-width: 1100px) {
+    .welcome .left-content {
+        width: 50vw;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    .welcome { background-position: center; }
+}
+
+@media (min-width: 1101px) {
+    .welcome .left-content {
+        width: 50vw;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    .welcome { background-position: 0% 50%; }
 }
 
 @media (min-width: 501px) and (orientation: portrait) {
