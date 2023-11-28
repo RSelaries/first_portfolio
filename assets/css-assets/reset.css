@@ -2,12 +2,14 @@
 @import url(./responsive.css);
 
 /* Reset CSS */
-body, body * {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: inherit;
+body,
+body * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    scrollbar-gutter: 0px;
 }
 
 *::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
