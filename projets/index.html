@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Beaux Arts</title>
-        <link rel="stylesheet" href="./style.css" />
+        <title>Projets</title>
 
-        <!-- Load header and footer -->
+        <link rel="stylesheet" href="./style.css"/>
+        <link rel="icon" href="../assets/images/icon.png" type="image/x-icon" />
+
+        <!-- Load Header and Footer -->
         <script
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -19,30 +21,31 @@
             });
         </script>
 
+        <script type="module" src="./fetchPages.js"></script>
+
         <!-- Change header colors -->
         <style>
             :root {
-                --header-background-color : #fff4;
-                --header-left-window-background-color : #fff4;
+                --header-background-color: #18181899;
+                --header-left-window-background-color: #fff4;
                 --header-left-window-home-button-color: #000;
-                --header-text-color : #000;
-                --header-left-window-text-color : #000a;
+                --header-text-color: #fdf8f1;
+                --header-left-window-text-color: #000a;
+            }
+
+            .center-buttons * {
+                color: #fdf8f166 !important;
+            }
+
+            .projets {
+                color: #e27c74 !important;
             }
         </style>
     </head>
     <body>
         <div id="header"></div>
 
-        <div class="html-background"></div>
-
-        <div class="container import-container">
-
-            <div class="project-image maree-basse" id="one">
-                <a class="filter disable-link" href=""></a>
-                <div class="project-name"><h1>Projet Marée Basse</h1></div>
-              </div>
-
-        </div>
-
+        <section class="all-projects">
+        </section>
     </body>
 </html>

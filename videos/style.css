@@ -1,6 +1,6 @@
 @import url(../../assets/css-assets/reset.css);
-@import url(./project-specific-style.css);
-@import url(./project-responsive.css);
+@import url(../videos/project-specific-style.css);
+@import url(../videos/project-responsive.css);
 
 html {
     background-color: #000;

@@ -16,17 +16,6 @@ html {
     background-color: #cccccc;
 }
 
-/* .html-background {
-    background-image: url(./miniatures/marée\ basse\ flou.png);
-    background-size: cover;
-    background-position: 50% 50%;
-
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-} */
-
 .container { display: grid; }
 
 .project-image {
@@ -82,4 +71,4 @@ html {
     height: 20vw;
 }
 
-#one { background-image: url(./miniatures/marée\ basse2.webp); }
+#one { background-image: url(./assets/miniatures/marée\ basse2.webp); }
