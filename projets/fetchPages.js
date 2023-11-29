@@ -9,9 +9,9 @@ async function fetchPage(name) {
     console.log(doc)
 
     const links = doc.querySelectorAll('link[rel=stylesheet]')
-    for(const link of links ) {
-        document.head.append(link)
-    }
+    // for(const link of links ) {
+    //     document.head.append(link)
+    // }
 
     const allProjects = doc.querySelectorAll('.import-container > .import-project')
     console.log(allProjects)    

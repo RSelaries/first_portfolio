@@ -1,5 +1,4 @@
 @import url(../assets/css-assets/reset.css);
-@import url(project-responsive.css);
 
 html {
     /* background-color: black; */
@@ -9,4 +8,3 @@ section.all-projects {
     display: grid;
     grid-template-columns: repeat(2, auto);
 }
-
