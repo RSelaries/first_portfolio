@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photos</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Photos</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="../assets/images/icon.png" type="image/x-icon"/>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="../assets/images/icon.png" type="image/x-icon" />
 
-    <!-- Load Header and Footer -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(function () {
-        $("#header").load("../assets/html-assets/header.html");
-        $("#footer").load("footer.html");
-      });
-    </script>
+        <!-- Load Header and Footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../assets/html-assets/header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
 
-    <!-- Change header colors -->
-    <style>
-    :root {
-      --header-background-color : #0009;
-      --header-left-window-background-color : #fff4;
-      --header-left-window-home-button-color: #000;
-      --header-text-color : #e1d5c4;
-      --header-left-window-text-color : #000a;
-    }
-    </style>
-  </head>
+        <!-- Load Projects -->
+        <script
+            type="module"
+            src="../assets/js-assets/fetchProjects.js"
+        ></script>
+        <script>
+            $(function () {
+                fetchProjects("photos");
+            });
+        </script>
 
-  <body>
-    <div id="header"></div>
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #0009;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #e1d5c4;
+                --header-left-window-text-color: #000a;
+            }
+        </style>
+    </head>
 
-    <div class="container import-container">
+    <body>
+        <div id="header"></div>
 
-      <div class="photo-album-cover" id="one">
-        <a class="filter disable-link" href=""></a>
-        <div class="photo-album-name"><h1>Photos Argentique</h1></div>
-      </div>
-      
-      <div class="photo-album-cover" id="two">
-        <a class="filter disable-link" href="./photos-de-projet"></a>
-        <div class="photo-album-name"><h1>Photos de Projets</h1></div>
-      </div>
-      
-      
-      <div class="photo-album-cover" id="three">
-        <a class="filter disable-link" href="#"></a>
-        <div class="photo-album-name"><h1>Photos de Nu</h1></div>
-      </div>
-      
-      <div class="photo-album-cover" id="four">
-        <a class="filter disable-link" href=""></a>
-        <div class="photo-album-name"><h1>album série 4 placeholder</h1></div>
-      </div>
+        <div class="container import-container">
+            <div class="forProjectPage" id="projet-vr-lorine"></div>
+        </div>
 
-    </div>
-
-  </body>
+    </body>
 </html>

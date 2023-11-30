@@ -1,0 +1,44 @@
+.photo-album-cover {
+    height: var(--album-height);
+    width: var(--album-width);
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.filter {
+    height: var(--album-height);
+    
+    position: absolute;
+    transition: all 0s;
+}
+
+.filter:hover {
+    transition: all 0.25s ease-in-out;
+    background-color: #0000;
+
+    cursor: pointer;
+}
+
+.photo-album-name {
+    z-index: 99;    /* The header Z-index is set at 100 */
+
+    background-color: #0009;
+    width: 100%;
+    height: fit-content;
+
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.07rem;
+    font-size: 0.65rem;
+    color: #e1d5c4;
+}
+
+.photo-album-name h1 {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7);
+}
+
+.photo-album-cover .photo-album-name h1 {
+    padding: 0 2rem;
+}
