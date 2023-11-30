@@ -19,6 +19,10 @@
             });
         </script>
 
+        <!-- Load Projects -->
+        <script type="module" src="../assets/js-assets/fetchProjects.js"></script>
+        <script> $(function () { fetchProjects('beaux-arts') }) </script>
+
         <!-- Change header colors -->
         <style>
             :root {
@@ -35,13 +39,8 @@
 
         <div class="html-background"></div>
 
-        <div class="container import-container">
-
-            <div class="project-image maree-basse" id="one">
-                <a class="filter disable-link" href=""></a>
-                <div class="project-name"><h1>Projet Marée Basse</h1></div>
-              </div>
-
+        <div class="container">
+            <div class="forProjectPage" id="maree-basse"></div>
         </div>
 
     </body>

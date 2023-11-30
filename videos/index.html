@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Vidéos</title>
 
         <link rel="stylesheet" href="../videos/style.css" />
@@ -21,6 +21,10 @@
             });
         </script>
 
+        <!-- Load Projects -->
+        <script type="module" src="../assets/js-assets/fetchProjects.js"></script>
+        <script> $(function () { fetchProjects('videos') }) </script>
+
         <!-- Change header colors -->
         <style>
             :root {
@@ -36,45 +40,20 @@
         <div id="header"></div>
 
         <div class="grid import-container">
-
-            <div class="project one import-project">
-                    <div class="project-second-image">
-                        <div class="project-text">
-                            <h1 class="project-name">Visualizer</h1>
-                            <p class="description">Boucle vidéo illustrant le titre Let it Happen - Tame Impala</p>
-                            <p class="date">2023</p>
-                        </div>
-                    </div>
-                    <a href="./Visualizer" class="project-image" ontouchstart="hoverForSmartphone('one');">
-                        <div>Visualizer</div>
-                    </a>
-            </div>
-
-            <div class="project two import-project">
-                <div class="project-second-image">
-                    <div class="project-text">
-                        <h1 class="project-name">Clocks around the World</h1>
-                        <p class="description">Exercice de Motion Design des différentes heures autour du monde</p>
-                        <p class="date">2022</p>
-                    </div>
-                </div>
-                <a href="" class="project-image" ontouchstart="hoverForSmartphone('two');">
-                    <div>
-                        <span class="clocks">clocks</span>
-                        <span class="around">around the world</span>
-                    </div>
-                </a>
-            </div>
+            <div class="forProjectPage" id="visualizer"></div>
+            <div class="forProjectPage" id="clocks-around-the-world"></div>
         </div>
 
         <script>
             function hoverForSmartphone(projectNumber, isTrue) {
-                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1];
-                projectImage.classList.add('smartphone-hover');
+                let projectImage =
+                    document.getElementsByClassName(projectNumber)[0]
+                        .children[1];
+                projectImage.classList.add("smartphone-hover");
 
                 document.ontouchend = (event) => {
-                    projectImage.classList.remove('smartphone-hover');
-                }
+                    projectImage.classList.remove("smartphone-hover");
+                };
             }
         </script>
     </body>

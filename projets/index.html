@@ -21,7 +21,10 @@
             });
         </script>
 
-        <script type="module" src="./fetchPages.js"></script>
+        <!-- Load Projects -->
+        <script type="module" src="../assets/js-assets/fetchProjects.js"></script>
+        <script> $(function () { fetchProjects('videos') }) </script>
+        <script> $(function () { fetchProjects('beaux-arts') }) </script>
 
         <!-- Change header colors -->
         <style>
@@ -46,6 +49,9 @@
         <div id="header"></div>
 
         <section class="all-projects">
+            <div class="forProjectPage" id="visualizer"></div>
+            <div class="forProjectPage" id="clocks-around-the-world"></div>
+            <div class="forProjectPage" id="maree-basse"></div>
         </section>
     </body>
 </html>

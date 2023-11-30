@@ -1,5 +1,5 @@
-@import url(../../assets/css-assets/reset.css);
-@import url(../videos/project-specific-style.css);
+@import url(../../assets/css-assets/reset.css);  
+/* @import url(../videos/style-for-projects.css); */
 @import url(../videos/project-responsive.css);
 
 html {
@@ -14,64 +14,4 @@ html {
     width: 100vw;
     display: grid;
     padding-top: 3rem;
-}
-
-.project {
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: var(--gap-between-projects);
-    position: relative;
-}
-
-.detect-mouse-hover {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-
-.project * { background-size: cover; }
-
-.project-image {
-    display: flex;
-    position: absolute;
-    background-position: 50% 50%;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;  
-    color: #fff;
-    font-family: 'Teko', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 6rem;
-}
-
-.project-second-image {
-    position: absolute;
-    flex-direction: column;
-    background-position: 50% 50%;
-}
-
-.project-image:hover { opacity: 0; transition: all 0.4s; }
-.project-image.smartphone-hover { opacity: 0; transition: all 0.4s; }
-
-.project-text {
-    padding: 2% 2.5%;
-    color: #fdf8f1;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.7rem;
-    padding-bottom: 2rem;
-
-    /* background-image: linear-gradient(#0008 80%, #0000); */
-    height: 100%;
-    background-color: #0008;
-}
-
-.project-second-image h1 {
-    font-size: 1.5rem;
-    padding-bottom: 0.3rem;
-}
-
-.project-second-image p.description {
-    color: #aca59c;
 }

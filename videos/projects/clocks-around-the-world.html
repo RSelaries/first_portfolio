@@ -1,0 +1,50 @@
+<div class="project two videos">
+    <div class="project-second-image">
+        <div class="project-text">
+            <h1 class="project-name">Clocks around the World</h1>
+            <p class="description">
+                Exercice de Motion Design des différentes heures autour du monde
+            </p>
+            <p class="date">2022</p>
+        </div>
+    </div>
+    <a href="" class="project-image" ontouchstart="hoverForSmartphone('two');">
+        <div>
+            <span class="clocks">clocks</span>
+            <span class="around">around the world</span>
+        </div>
+    </a>
+
+    <style>
+        @import url(../videos/style-for-projects.css);
+
+        .two.videos .project-image {
+            background-image: url(../videos/assets/miniatures/Clocks-around-the-world.png);
+        }
+        .two.videos .project-second-image {
+            background-image: url(https://graphiste.com/blog/wp-content/uploads/sites/4/2022/01/Image-a-la-une-motion-design-idees.png);
+        }
+
+        .two.videos .project-image div {
+            width: 100%;
+            height: 100%;
+            background-color: #0006;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* font-family: Rubik Mono One; */
+            color: #fffe;
+        }
+
+        .two.videos .project-image div .clocks {
+            font-size: calc(var(--project-image-font-size) * 1);
+        }
+
+        .two.videos .project-image div .around {
+            position: absolute;
+            top: calc( var(--image-width) * 0.45 );
+            font-size: calc(var(--project-image-font-size) * 0.3);
+        }
+    </style>
+</div>

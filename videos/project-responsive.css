@@ -62,3 +62,15 @@
         height: var(--image-height);
     }
 }
+
+@media (max-width: 500px) {
+    :root {
+        --project-image-font-size: 20vw
+    }
+}
+
+@media (min-width: 501px) {
+    :root {
+        --project-image-font-size: 10vw
+    }
+}

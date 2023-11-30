@@ -13,7 +13,7 @@ async function fetchPage(name) {
     //     document.head.append(link)
     // }
 
-    const allProjects = doc.querySelectorAll('.import-container > .import-project')
+    const allProjects = doc.querySelectorAll('.import-project')
     console.log(allProjects)    
     for(const project of allProjects) {
         let allProjectsContainer = document.getElementsByClassName('all-projects')[0]
@@ -24,5 +24,3 @@ async function fetchPage(name) {
 Object.assign(window, {
     fetchPage,
 })
-
-fetchPage('videos')

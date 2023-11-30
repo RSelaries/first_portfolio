@@ -16,59 +16,17 @@ html {
     background-color: #cccccc;
 }
 
-.container { display: grid; }
-
-.project-image {
-    z-index: 2;
-    width: var(--album-width);
-    height: var(--album-height);
-    background-position: 50% 50%;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-}
-
-.project-name {
-    z-index: 99;
-    background-color: #0009;
-    width: 100%;
-    height: fit-content;
-
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 0.07rem;
-    font-size: 0.65rem;
-    color: #e1d5c4;
-}
-
-.project-name h1 {
-    padding: 0 2rem;
-    -webkit-transform: scaleY(0.7);
-    transform: scaleY(0.7);
-}
-
-.filter {
-    height: var(--album-height);
-    
-    position: absolute;
-    transition: all 0s;
-}
-
-.filter:hover {
-    transition: all 0.25s ease-in-out;
-    background-color: #0000;
-
-    cursor: pointer;
+.container {
+    display: grid;
+    padding-top: 8vw;
 }
 
 .maree-basse {
-    margin-top: 8vw;
-    width: 100vw;
-    height: 20vw;
+    width: 100vw !important;
+    height: 20vw !important;
 }
 
 .maree-basse .filter {
-    width: 100vw;
-    height: 20vw;
+    width: 100vw !important;
+    height: 20vw !important;
 }
-
-#one { background-image: url(./assets/miniatures/marée\ basse2.webp); }

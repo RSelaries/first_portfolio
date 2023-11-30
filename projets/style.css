@@ -1,10 +1,26 @@
 @import url(../assets/css-assets/reset.css);
+@import url(../projets/pages-styles/videos.css);
+@import url(../projets/pages-styles/beaux-arts.css);
+
+:root {
+    --gap-between-projects: 1vw;
+    --a-third : calc(100vw / 3);
+    --project-size: calc( ( 100vw - var(--gap-between-projects)) / 3 );
+    --image-width: calc( var(--project-size) - var(--gap-between-projects) );
+    --project-image-font-size: calc(var(--image-width) / 4.8 );
+}
 
 html {
-    /* background-color: black; */
+    background-color: #0A0A0A;
 }
 
 section.all-projects {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3 , auto);
+    padding-left: var(--gap-between-projects);
+    padding-top: 3rem;
+}
+
+.forProjectPage {
+    width : 0vw;
 }
