@@ -1,9 +1,6 @@
-
-
 .project.videos {
     width: 0px;
     padding-bottom: calc(( var(--image-width) * 0.8) + var(--gap-between-projects)) !important;
-    /* aspect-ratio: 5/4; */
 }
 
 .videos .project-second-image {
@@ -12,6 +9,6 @@
 }
 
 .videos .project-image {
-    width: var(--image-width) !important;
-    aspect-ratio: 5/4 !important;
+    width: var(--image-width);
+    aspect-ratio: 5/4;
 }

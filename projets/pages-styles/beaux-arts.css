@@ -8,3 +8,11 @@
     aspect-ratio: 5/4;
     background-color: #0004;
 }
+
+.beaux-arts .project-name {
+    font-size: calc( var(--image-width) * 0.04 );
+}
+
+.beaux-arts .project-name h1 {
+    padding-left: calc( var(--image-width) * 0.05 ) !important;
+}

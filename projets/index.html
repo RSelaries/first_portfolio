@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Projets</title>
 
-        <link rel="stylesheet" href="./style.css"/>
+        <link rel="stylesheet" href="./style.css" />
         <link rel="icon" href="../assets/images/icon.png" type="image/x-icon" />
 
         <!-- Load Header and Footer -->
@@ -22,9 +22,20 @@
         </script>
 
         <!-- Load Projects -->
-        <script type="module" src="../assets/js-assets/fetchProjects.js"></script>
-        <script> $(function () { fetchProjects('videos') }) </script>
-        <script> $(function () { fetchProjects('beaux-arts') }) </script>
+        <script
+            type="module"
+            src="../assets/js-assets/fetchProjects.js"
+        ></script>
+        <script>
+            $(function () {
+                fetchProjects("videos");
+            });
+        </script>
+        <script>
+            $(function () {
+                fetchProjects("beaux-arts");
+            });
+        </script>
 
         <!-- Change header colors -->
         <style>
@@ -44,6 +55,20 @@
                 color: #e27c74 !important;
             }
         </style>
+
+        <!-- hover for smartphone -->
+        <script>
+            function hoverForSmartphone(projectNumber, isTrue) {
+                let projectImage =
+                    document.getElementsByClassName(projectNumber)[0]
+                        .children[1];
+                projectImage.classList.add("smartphone-hover");
+
+                document.ontouchend = (event) => {
+                    projectImage.classList.remove("smartphone-hover");
+                };
+            }
+        </script>
     </head>
     <body>
         <div id="header"></div>

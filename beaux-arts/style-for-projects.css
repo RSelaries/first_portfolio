@@ -20,7 +20,7 @@
 }
 
 .beaux-arts .project-name h1 {
-    padding: 0 2rem;
+    padding-left: 2rem;
     -webkit-transform: scaleY(0.7);
     transform: scaleY(0.7);
 }
