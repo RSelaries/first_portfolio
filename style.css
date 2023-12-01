@@ -6,12 +6,15 @@
     width: 100vw;
 }
 
-section.page {
+.background {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
     background-image: url(../../assets/images/home-page-image.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    user-select: none;
 }
 
 section.welcome {
@@ -19,13 +22,21 @@ section.welcome {
     height: 100vh;
     flex-shrink: 0;
     font-family: Rubik Mono One;
+    /* backdrop-filter: blur(4px); */
+}
+
+.for-blur {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 300vh !important;
+    /* background-color: aliceblue; */
 }
 
 section.welcome .apropo {
     width: 100%;
     position: absolute;
     bottom: 0;
-    /* left: 2.5%; */
     color: var(--header-text-color);
     text-align: center;
 }
@@ -40,11 +51,23 @@ section.welcome .apropo {
     cursor: default;
 }
 
+.welcome .left-content .name {
+    z-index: 1;
+    user-select: none;
+}
+
 .about {
+    z-index: 3;
     padding: 2.5%;
     width: 100vw;
     font-family: Rubik Mono One;
     color: var(--header-text-color);
+    min-height: 100vh;
+    /* backdrop-filter: blur(4px); */
+}
+
+.about p {
+    z-index: 10000;
 }
 
 .arrow {
@@ -58,7 +81,7 @@ section.welcome .apropo {
         justify-content: center;
         padding-top: 4rem;
     }
-    .page { background-position: 57% 50%; }
+    .background { background-position: 57% 50%; }
 }
 
 @media (min-width: 501px) and (max-width: 1100px) {
@@ -67,7 +90,7 @@ section.welcome .apropo {
         justify-content: center;
         font-size: 1.5rem;
     }
-    .page { background-position: center; }
+    .background { background-position: center; }
 }
 
 @media (min-width: 1101px) {
@@ -76,9 +99,9 @@ section.welcome .apropo {
         justify-content: center;
         font-size: 1.5rem;
     }
-    .page { background-position: 0% 50%; }
+    .background { background-position: 0% 50%; }
 }
 
 @media (min-width: 501px) and (orientation: portrait) {
-    .page { background-position: 50% 50%; }
+    .background { background-position: 50% 50%; }
 }

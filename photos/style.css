@@ -4,6 +4,10 @@
     color: rgb(46, 127, 164)!important;
 }
 
+html {
+    background-color: #0a0a0a;
+}
+
 .container {
     display: grid;
 }
