@@ -30,3 +30,7 @@ html {
     width: 100vw !important;
     height: 20vw !important;
 }
+
+.project-name h1 {
+    font-size: 1.2rem;
+}

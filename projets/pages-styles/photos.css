@@ -1,0 +1,14 @@
+.photos.photo-album-cover {
+    width: var(--image-width);
+    aspect-ratio: 5/4;
+}
+
+.photos .filter {
+    width: var(--image-width);
+    aspect-ratio: 5/4;
+    background-color: #0004
+}
+
+.photos .photo-album-name h1 {
+    font-size: calc( var(--image-width) * 0.04 );
+}

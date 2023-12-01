@@ -7,7 +7,7 @@
     align-items: flex-end;
 }
 
-.beaux-arts .project-name {
+.beaux-arts .project-name{
     z-index: 99;
     background-color: #0009;
     width: 100%;
@@ -15,7 +15,7 @@
 
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.07rem;
-    /* font-size: 0.65rem; */
+    font-size: 0.65rem;
     color: #e1d5c4;
 }
 

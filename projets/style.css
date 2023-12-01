@@ -1,6 +1,7 @@
 @import url(../assets/css-assets/reset.css);
 @import url(../projets/pages-styles/videos.css);
 @import url(../projets/pages-styles/beaux-arts.css);
+@import url(../projets/pages-styles/photos.css);
 
 :root {
     --gap-between-projects: 1vw;
@@ -17,8 +18,8 @@ html {
 section.all-projects {
     display: grid;
     grid-template-columns: repeat(3 , auto);
+    padding: 3rem 0;
     padding-left: var(--gap-between-projects);
-    padding-top: 3rem;
 }
 
 .forProjectPage {

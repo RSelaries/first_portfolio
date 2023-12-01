@@ -1,6 +1,6 @@
 @import url(../assets/css-assets/reset.css);
 
-.photos {
+.headerDiv .photos {
     color: rgb(46, 127, 164)!important;
 }
 
