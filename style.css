@@ -22,7 +22,6 @@ section.welcome {
     height: 100vh;
     flex-shrink: 0;
     font-family: Rubik Mono One;
-    /* backdrop-filter: blur(4px); */
 }
 
 .for-blur {
@@ -30,7 +29,6 @@ section.welcome {
     position: fixed;
     width: 100vw;
     height: 300vh !important;
-    /* background-color: aliceblue; */
 }
 
 section.welcome .apropo {
