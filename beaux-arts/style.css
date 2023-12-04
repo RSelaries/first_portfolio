@@ -8,6 +8,15 @@
 @media (min-width: 501px) {
     .filter { width: 50%; background-color: #0004; }
     :root { --album-height : 45vw; --album-width : 50vw; }
+    .maree-basse {
+        width: 100vw !important;
+        height: 20vw !important;
+    }
+    
+    .maree-basse .filter {
+        width: 100vw !important;
+        height: 20vw !important;
+    }
 }
 
 .headerDiv .dessins { color: #377d19 !important; }
@@ -18,17 +27,7 @@ html {
 
 .container {
     display: grid;
-    padding-top: 8vw;
-}
-
-.maree-basse {
-    width: 100vw !important;
-    height: 20vw !important;
-}
-
-.maree-basse .filter {
-    width: 100vw !important;
-    height: 20vw !important;
+    padding-top: 3rem;
 }
 
 .project-name h1 {

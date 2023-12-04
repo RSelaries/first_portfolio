@@ -23,3 +23,9 @@ html {
     .filter { width: 50%; background-color: #0004; }
     :root { --album-height : 45vw; --album-width : 50vw; }
 }
+
+@media (max-width: 700px) {
+    .container {
+        padding-top: 3rem;
+    }
+}

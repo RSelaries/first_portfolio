@@ -1,6 +1,7 @@
 .project-image {
     width: var(--album-width);
-    height: var(--album-height);
+    /* height: var(--album-height); */
+    aspect-ratio: 5/4;
     background-position: 50% 50%;
     background-size: cover;
     display: flex;

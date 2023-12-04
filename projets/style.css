@@ -28,6 +28,17 @@ section.all-projects {
     section.all-projects {
         grid-template-columns: repeat(2 , auto);
     }
+
+    .photo-album-name,
+    .beaux-arts .project-name,
+    .project.videos .project-second-image h1 {
+        display: none;
+    }
+
+    .project.videos .project-second-image p.description {
+        font-size: 4vw;
+        color: #fff;
+    }
 }
 
 @media (min-width : 501px) {
