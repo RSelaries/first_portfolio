@@ -1,5 +1,9 @@
 @import url(../../assets/css-assets/reset.css);
 
+html {
+    background-color: black;
+}
+
 .header {
     position:fixed;
     border: none;
@@ -58,18 +62,40 @@ section.welcome .apropo {
     z-index: 3;
     padding: 2.5%;
     width: 100vw;
-    font-family: Rubik Mono One;
+    font-family: 'Rubik', sans-serif;
     color: var(--header-text-color);
-    min-height: 100vh;
+    /* min-height: 100vh; */
     /* backdrop-filter: blur(4px); */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about > div {
+    /* margin-left: 20vw; */
+}
+
+.about h1 {
+    font-weight: 900;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
 }
 
 .about p {
-    z-index: 10000;
+    font-weight: 500;
 }
 
 .arrow {
     font-family: 'Potta One';
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts2 {
+    padding-left: 1rem;
 }
 
 @media (max-width: 500px) {
