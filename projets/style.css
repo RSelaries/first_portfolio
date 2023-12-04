@@ -3,25 +3,42 @@
 @import url(../projets/pages-styles/beaux-arts.css);
 @import url(../projets/pages-styles/photos.css);
 
-:root {
-    --gap-between-projects: 1vw;
-    --a-third : calc(100vw / 3);
-    --project-size: calc( ( 100vw - var(--gap-between-projects)) / 3 );
-    --image-width: calc( var(--project-size) - var(--gap-between-projects) );
-    --project-image-font-size: calc(var(--image-width) / 4.8 );
-}
-
 html {
     background-color: #0A0A0A;
 }
 
 section.all-projects {
     display: grid;
-    grid-template-columns: repeat(3 , auto);
     padding: 3rem 0;
     padding-left: var(--gap-between-projects);
 }
 
 .forProjectPage {
     width : 0vw;
+}
+
+@media (max-width : 500px) {
+    :root {
+        --gap-between-projects : 0vw;
+        --project-size: calc( 100vw / 2 );
+        --image-width: calc( var(--project-size) - var(--gap-between-projects) );
+        --project-image-font-size: calc(var(--image-width) / 4.8 );
+    }
+
+    section.all-projects {
+        grid-template-columns: repeat(2 , auto);
+    }
+}
+
+@media (min-width : 501px) {
+    :root {
+        --gap-between-projects: 1vw;
+        --project-size: calc( ( 100vw - var(--gap-between-projects)) / 3 );
+        --image-width: calc( var(--project-size) - var(--gap-between-projects) );
+        --project-image-font-size: calc(var(--image-width) / 4.8 );
+    }
+
+    section.all-projects {
+        grid-template-columns: repeat(3 , auto);
+    }
 }
