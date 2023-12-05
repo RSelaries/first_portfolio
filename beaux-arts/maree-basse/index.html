@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Marée Basse</title>
+
+        <link rel="stylesheet" href="./style.css" />
+
+        <link rel="icon" href="./assets/images/icon.png" type="image/x-icon" />
+
+        <!-- Load header and footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../../assets/html-assets/header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
+
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #18181899;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #fdf8f1;
+                --header-left-window-text-color: #000a;
+            }
+            .dessins {
+                color: #b5c8d9 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <section class="page">
+            <section class="grid">
+                <!-- Title -->
+                <div class="title">
+                    <h1>Marée Basse</h1>
+                    <h2>
+                        "Marée Basse" est un sujet d'expression plastique. J'ai
+                        décidé à travers la marée basse de représenter ma
+                        difficulter à dessiner, l'absence de la mer étant ici
+                        synonyme d'absence de confience et moi et motivation
+                        pour le dessin. Je vais donc jouer sur l'absence tout au
+                        long du sujet, absence de matière ou absence de
+                        materiau. Je vais également travaillé le pastel gras
+                        pour créer des composition chargés.
+                    </h2>
+                </div>
+
+                <!-- Noir et blanc 1 -->
+                <div class="grid-item images">
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/G - noir et blanc 1.jpg"
+                    />
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/D - noir et blanc 1.jpg"
+                    />
+                </div>
+
+                <div class="grid-item description">
+                    <p>Ma première recherche, à l'ancre de chine</p>
+                </div>
+
+                <!-- Pastel gras 1 -->
+                <div class="grid-item images">
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/G - pastel gras 1.jpg"
+                    />
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/D - pastel gras 1.jpg"
+                    />
+                </div>
+
+                <div class="grid-item description">
+                    <p>Ma seconde recherche, aux pastels gras</p>
+                </div>
+
+                <!-- Noir et blanc 3 -->
+                <div class="grid-item images">
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/G - noir et blanc 3.png"
+                    />
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/D - noir et blanc 3.png"
+                    />
+                </div>
+
+                <div class="grid-item description">
+                    <p>Ma cinquième recherche, ici le <span>BLEU</span> représente la partie du papier qui a été découpé</p>
+                </div>
+
+                <!-- Pastel gras 2 -->
+                <div class="grid-item images">
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/G - pastel gras 2.jpg"
+                    />
+                    <img
+                        loading="lazy"
+                        src="./assets/images high quality/D - pastel gras 2.jpg"
+                    />
+                </div>
+
+                <div class="grid-item description">
+                    <p>Mes 4 dernières recherches, j'ai ici abandonné la figure du bateau pour me concentrer sur l'atmosphère</p>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>

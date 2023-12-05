@@ -1,0 +1,75 @@
+@import url(../../assets/css-assets/reset.css);
+
+html {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+}
+
+.page {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    width: var(--grid-width);
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, auto);
+}
+
+.title {
+    padding-bottom: 2rem;
+    max-width: var(--title-width);
+    text-align: justify;
+}
+
+.title h1 {
+    color: #b5c8d9;
+    font-size: 5vw;
+}
+
+.title h2 {
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-size);
+    width: calc( var(--grid-width) / 2);
+}
+
+.images > img {
+    width: calc(100% - calc(var(--gap-size) / 2) );
+    background-color: #b5c8d9;
+}
+
+.description {
+    padding-left: 1rem;
+    padding-bottom: calc(var(--gap-size)*1);
+}
+
+.description span {
+    font-weight: 900;
+    color: #b5c8d9;
+    /* background-color: #fff7; */
+}
+
+:root {
+    --grid-width: 90vw;
+    --gap-size: 2%;
+}
+
+@media (max-width: 500px) {
+    :root {
+        --title-width: 100vw;
+    }
+    .title h1 {
+        font-size: 15vw;
+    }
+}
