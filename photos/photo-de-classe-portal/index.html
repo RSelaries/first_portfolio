@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Photo de Classe</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="icon"
+            href="../../assets/images/icon.png"
+            type="image/x-icon"
+        />
+
+        <!-- Load Header and Footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../../assets/html-assets/header.html");
+            });
+        </script>
+
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #0009;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #e1d5c4;
+                --header-left-window-text-color: #000a;
+            }
+
+            .photos {
+                color: red !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+    </body>
+</html>
