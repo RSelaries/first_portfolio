@@ -2,12 +2,12 @@
 
 @media (max-width: 500px) { 
     .filter { width: 100%; background-color: #0000; }
-    :root { --album-height : 90vw; --album-width : 100vw; }
+    :root {--album-width : 100vw; }
 }
 
 @media (min-width: 501px) {
     .filter { width: 50%; background-color: #0004; }
-    :root { --album-height : 45vw; --album-width : 50vw; }
+    :root {--album-width : 50vw; }
     .maree-basse {
         width: 100vw !important;
         height: 20vw !important;
@@ -32,4 +32,8 @@ html {
 
 .project-name h1 {
     font-size: 1.2rem;
+}
+
+.forProjectPage {
+    width: var(--album-width);
 }

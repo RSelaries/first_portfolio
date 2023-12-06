@@ -1,6 +1,5 @@
 .project-image {
     width: var(--album-width);
-    /* height: var(--album-height); */
     aspect-ratio: 5/4;
     background-position: 50% 50%;
     background-size: cover;
@@ -12,7 +11,6 @@
     z-index: 99;
     background-color: #0009;
     width: 100%;
-    /* height: fit-content; */
 
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.07rem;
@@ -27,8 +25,8 @@
 }
 
 .beaux-arts .filter {
-    height: var(--album-height);
-    
+    width: var(--album-width);
+    aspect-ratio: 5/4;
     position: absolute;
     transition: all 0s;
 }

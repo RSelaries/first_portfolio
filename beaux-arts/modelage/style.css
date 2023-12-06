@@ -1,0 +1,53 @@
+@import url(../../assets/css-assets/reset.css);
+
+html {
+    background-color: #0a0a0a;
+    font-family: 'Rubik', sans-serif;
+    color: #fdf8f1;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 10vw;
+    margin-bottom: -2vw;
+    transform: scaleY(0.7);
+    top: 1vw;
+    z-index: -1;
+}
+
+.bande-photo {
+    width: 100vw;
+    padding: var(--padding-of-bande-photo);
+}
+
+.bande-photo div {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-between-images);
+}
+
+.bande-photo div img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.bande-photo h1 {
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+}
+
+.ecorche { padding-right: calc( var(--gap-between-images) * 4 ); }
+.ecorche div { aspect-ratio: 50 / 12; }
+
+.vague { padding-right: calc( var(--gap-between-images) * 3 ); }
+.vague div { aspect-ratio: 12 / 3; }
+
+:root {
+    --padding-of-bande-photo: 1rem;
+    --gap-between-images: 1rem;
+}
