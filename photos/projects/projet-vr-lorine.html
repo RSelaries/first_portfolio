@@ -1,10 +1,57 @@
-<div class="photos photo-album-cover" id="two">
-    <a class="photos filter disable-link" href="../photos/photos-de-projet"></a>
-    <div class="photos photo-album-name"><h1>Projet casque VR de Lorine Mercier</h1></div>
+<div class="photos photo-album-cover lorine" id="two">
+    <a class="photos filter disable-link" href="../photos/photos-de-projet">
+        <div class="photos photo-album-name">
+            <div>
+                <div>Projet de</div>
+                <h1>Lorine Mercier</h1>
+            </div>
+            <h2>2022</h2>
+        </div>
+    </a>
 </div>
 
 <style>
     @import url(../photos/style-for-projects.css);
 
     #two { background-image: url(../photos/assets/miniatures/photos_de_projets.webp ); }
+
+    .lorine .photo-album-name {
+        color: #fdf8f1;
+        text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Archivo Black', sans-serif;
+    }
+
+    .lorine .filter {
+        background-color: #0004 !important;
+        position: relative;
+        display: flex;
+    }
+
+    .lorine .photo-album-name div,
+    .lorine div h1 {
+        width: 100%;
+    }
+
+    .lorine h1 {
+        line-height: 80%;
+        color: #fff7;
+        text-align: center;
+        font-size: calc(var(--album-width) * 0.1);
+    }
+
+    .lorine .photo-album-name div div {
+        font-size: calc(var(--album-width) * 0.05);
+        color: #fff7;
+        width: 100%;
+        text-align: center; 
+    }
+
+    .lorine h2 {
+        padding-left: 2%;
+        color: #fffa;
+    }
 </style>

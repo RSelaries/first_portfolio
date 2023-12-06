@@ -10,5 +10,9 @@
 }
 
 .photos .photo-album-name h1 {
-    font-size: calc( var(--image-width) * 0.04 );
+    /* font-size: calc( var(--image-width) * 0.04 ); */
+}
+
+:root {
+    /* --album-width: var(--image-width); */
 }

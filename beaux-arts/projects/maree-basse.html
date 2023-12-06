@@ -1,10 +1,50 @@
 <div class="project-image maree-basse beaux-arts" id="one">
-    <a class="filter" href="../beaux-arts/maree-basse/"></a>
-    <div class="project-name"><h1>Projet Marée Basse</h1></div>
+    <a class="filter" href="../beaux-arts/maree-basse/">
+        <div class="project-name">
+            <h1>Projet Maree Basse</h1>
+            <h2>2023</h2>
+        </div>
+    </a>
 </div>
 
 <style>
     @import url(../beaux-arts/style-for-projects.css);
 
     #one { background-image: url(../beaux-arts/assets/miniatures/marée\ basse2.webp); }
+
+    .maree-basse .project-name {
+        color: #fdf8f1;
+        text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Archivo Black', sans-serif;
+    }
+
+    .maree-basse .filter {
+        background-color: #0004 !important;
+        position: relative;
+        display: flex;
+    }
+
+    .maree-basse div h1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .maree-basse h1 {
+        padding-top: 2%;
+        line-height: 80%;
+        color: #0007;
+        text-align: center;
+        /* position: absolute; */
+        font-size: calc(var(--album-width) * 0.15);  
+    }
+
+    .maree-basse h2 {
+        padding-left: 2%;
+        color: #000a;
+    }
 </style>

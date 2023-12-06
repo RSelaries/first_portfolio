@@ -23,8 +23,6 @@ section.all-projects {
         --project-size: calc( 100vw / 2 );
         --image-width: calc( var(--project-size) - var(--gap-between-projects) );
         --project-image-font-size: calc(var(--image-width) / 4.8 );
-
-        --album-width: --image-width;
     }
 
     section.all-projects {

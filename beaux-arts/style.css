@@ -6,7 +6,7 @@
     }
     .filter {
         width: 100%;
-        background-color: #0000;
+        /* background-color: #0000; */
     }
     :root {
         --album-width: 100vw;
@@ -19,7 +19,7 @@
     }
     .filter {
         width: 50%;
-        background-color: #0004;
+        /* background-color: #0004; */
     }
     :root {
         --gap: 2vw;
@@ -51,10 +51,10 @@ html {
     padding-top: 3rem;
 }
 
-.project-name h1 {
-    font-size: 1.2rem;
+.forProjectPage {
+    width: var(--album-width);
 }
 
-.forProjectPage {
+.place-holder {
     width: var(--album-width);
 }

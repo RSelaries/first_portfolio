@@ -1,10 +1,50 @@
-<div class="photos photo-album-cover" id="portal">
-    <a class="photos filter disable-link" href="../photos/photo-de-classe-portal"></a>
-    <div class="photos photo-album-name"><h1>Reprise d'une jaquette de jeu vidéo</h1></div>
+<div class="photos portal photo-album-cover" id="portal">
+    <a class="photos filter disable-link" href="../photos/photo-de-classe-portal">        
+        <div class="photos photo-album-name">
+            <h1>Photo de classe</h1>
+            <h2>2022</h2>
+        </div>
+    </a>
 </div>
 
 <style>
     @import url(../photos/style-for-projects.css);
 
     #portal { background-image: url(../photos/assets/miniatures/portal.png); }
+
+    .portal .photo-album-name {
+        color: #fdf8f1;
+        text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Archivo Black', sans-serif;
+    }
+
+    .portal .filter {
+        background-color: #0007 !important;
+        position: relative;
+        display: flex;
+    }
+
+    .portal div h1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .portal h1 {
+        padding-top: 2%;
+        line-height: 80%;
+        color: #fffa;
+        text-align: center;
+        /* position: absolute; */
+        font-size: calc(var(--album-width) * 0.15);  
+    }
+
+    .portal h2 {
+        padding-left: 2%;
+        color: #fffa;
+    }
 </style>
