@@ -5,7 +5,8 @@ html { background-color: transparent; }
 body { background-color: transparent; }
 
 .grid {
-    background-color: #000;
+    padding-top: 2rem;
+    background-color: #1a1a1a;
 }
 
 .grid:after {

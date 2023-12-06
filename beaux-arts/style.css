@@ -1,32 +1,53 @@
 @import url(../../assets/css-assets/reset.css);
 
-@media (max-width: 500px) { 
-    .filter { width: 100%; background-color: #0000; }
-    :root {--album-width : 100vw; }
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: auto;
+    }
+    .filter {
+        width: 100%;
+        background-color: #0000;
+    }
+    :root {
+        --album-width: 100vw;
+    }
 }
 
 @media (min-width: 501px) {
-    .filter { width: 50%; background-color: #0004; }
-    :root {--album-width : 50vw; }
-    .maree-basse {
-        width: 100vw !important;
-        height: 20vw !important;
+    .container {
+        grid-template-columns: repeat(2, auto);
     }
-    
+    .filter {
+        width: 50%;
+        background-color: #0004;
+    }
+    :root {
+        --gap: 2vw;
+        --album-width: calc(calc(100vw - calc(var(--gap) * 3)) / 2);
+
+        --two-wide-album-width: calc(var(--album-width) * 2 + var(--gap));
+        --two-wide-aspect-ratio: 4/1;
+    }
+
+    .maree-basse {
+        width: var(--two-wide-album-width) !important;
+        aspect-ratio: var(--two-wide-aspect-ratio) !important;
+    }
+
     .maree-basse .filter {
-        width: 100vw !important;
-        height: 20vw !important;
+        width: var(--two-wide-album-width) !important;
+        aspect-ratio: var(--two-wide-aspect-ratio) !important;
     }
 }
 
-.headerDiv .dessins { color: #377d19 !important; }
-
 html {
-    background-color: #cccccc;
+    background-color: #0a0a0a;
 }
 
 .container {
+    gap: var(--gap);
     display: grid;
+    padding: var(--gap);
     padding-top: 3rem;
 }
 

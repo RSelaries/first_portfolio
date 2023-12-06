@@ -34,7 +34,7 @@
 
 @media (min-width: 501px) { /* On Desktop */
     :root {
-        --gap-between-projects: 1.5vw;
+        --gap-between-projects: 2vw;
         --half-gap-between-projects: calc( var(--gap-between-projects) / 2 );
         --project-size: calc(50vw - var(--half-gap-between-projects) );
         /* --image-width: 47.75vw; */
@@ -43,7 +43,7 @@
     }
 
     .grid {
-        padding-left: 1.5vw;
+        padding-left: var(--gap-between-projects);
         grid-template-columns: repeat(2, auto);
     }
 

@@ -8,6 +8,7 @@
 }
 
 .filter {
+    width: var(--album-width);
     height: var(--album-height);
     
     position: absolute;
