@@ -1,1 +1,5 @@
 @import url(../../assets/css-assets/reset.css);
+
+html {
+    background-color: #0a0a0a;
+}
