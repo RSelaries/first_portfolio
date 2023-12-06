@@ -15,6 +15,9 @@ body { background-color: transparent; }
 }
 
 .grid-item { float: left; }
+.grid-item:hover {
+    cursor: pointer;
+}
 
 @media (max-width: 500px) {
     .grid-item { width: 50vw; }
