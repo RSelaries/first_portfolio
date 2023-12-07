@@ -1,6 +1,7 @@
 .photos.photo-album-cover {
     width: var(--image-width);
     aspect-ratio: 5/4;
+    margin-bottom: var(--gap-between-projects); 
 }
 
 .photos .filter {

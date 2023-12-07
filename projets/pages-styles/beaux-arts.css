@@ -1,3 +1,7 @@
 .modelage h2 {
     color: #fff7 !important;
 }
+
+.project-image {
+    margin-bottom: var(--gap-between-projects);
+}

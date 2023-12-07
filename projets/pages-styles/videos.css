@@ -1,6 +1,6 @@
 .project.videos {
     width: 0px;
-    padding-bottom: calc(( var(--image-width) * 0.8) + var(--gap-between-projects)) !important;
+    margin-bottom: var(--gap-between-projects);
 }
 
 .videos .project-second-image {

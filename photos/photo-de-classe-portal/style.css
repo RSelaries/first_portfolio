@@ -2,4 +2,106 @@
 
 html {
     background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-size: var(--title-font-size);
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: calc(var(--image-width) * 2 + 5vw);
+}
+
+.wrapper {
+    margin-bottom: 3rem;
+}
+
+.container p {
+    padding: var(--text-padding);
+    font-weight: 500;
+}
+
+.photos {
+    width: fit-content;
+    padding: var(--photo-group-padding);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.photos2 {
+    margin: var(--photo-group-padding);
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: var(--photo-group-width);
+    aspect-ratio: 2.54;
+}
+
+.photos3 {
+    margin: var(--photo-group-padding);
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: var(--photo-group-width);
+}
+
+.photos img {
+    width: var(--image-width);
+}
+
+:root {
+    --image-width: 25vw;
+}
+
+@media (min-width: 500px) {
+    :root {
+        --image-width: 25vw;
+        --photo-group-padding: 1rem 0;
+        --text-padding: 0 2rem;
+        --title-font-size: 4rem;
+        --photo-group-width: calc(var(--image-width) * 2 + 5vw);
+    }
+
+    .photos3 img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --image-width: 42.5vw;
+        --photo-group-padding: 1rem 0;
+        --text-padding: 0 0.5rem;
+        --title-font-size: 3rem;
+        --photo-group-width: 100vw;
+    }
+
+    .photos2, .photos3 {
+        position: relative;
+        left: -5vw;
+    }
+
+    .photos2 {
+        aspect-ratio: 2.34 !important;
+    }
+
+    .photos3 img {
+        width: 32%;
+    }
 }
