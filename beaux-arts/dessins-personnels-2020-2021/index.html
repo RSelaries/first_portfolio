@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dessins 2020-2021</title>
+
+        <link rel="stylesheet" href="./style.css" />
+
+        <link
+            rel="icon"
+            href="../../assets/images/icon.png"
+            type="image/x-icon"
+        />
+
+        <!-- Load header and footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../../assets/html-assets/header.html");
+                $("#carousel-div").load("./carousel/carousel.html");
+            });
+        </script>
+
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #18181899;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #fdf8f1;
+                --header-left-window-text-color: #000a;
+            }
+
+            .dessins {
+                color: rgb(159, 19, 19) !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div id="carousel-div"></div>
+
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <div class="grid">
+            <img
+                data-id="1"
+                onclick="
+                    slideIndex = Number.parseInt(event.currentTarget.dataset.id);
+                    document.getElementById('carousel-div').classList.add('carousel-active');
+                    document.body.classList.add('carousel-active');
+                    
+                    showSlides(slideIndex);
+                    isCarouselActive = true;
+                    console.log('image '+slideIndex+' is supposed to be shown')
+                "
+                loading="lazy"
+                class="grid-item"
+                src="./assets/low-res/001.webp"
+            />
+
+            <!-- duplicate the <img> element up to 'enIndex' and increment the number in '004.png' -->
+            <script>
+                let grid = document.currentScript.parentElement;
+                let imgSrc = grid.querySelector("img");
+
+                let startIndex = 2;
+                let endIndex = 18;
+
+                for (let i = startIndex; i <= endIndex; i++) {
+                    /** @type{HTMLImageElement} */
+                    let imgClone = imgSrc.cloneNode(true);
+                    let imgIndex = i.toString().padStart(3, 0);
+                    imgClone.src = `./assets/low-res/${imgIndex}.webp`;
+                    imgClone.dataset.id = i;
+                    grid.append(imgClone);
+                }
+            </script>
+        </div>
+        <script>
+            let msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
+            msnry.layout();
+            for (const img of document.querySelectorAll(".grid-item")) {
+                img.onload = () => {
+                    msnry.layout();
+                };
+            }
+        </script>
+    </body>
+</html>
