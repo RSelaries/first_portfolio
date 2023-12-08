@@ -1,4 +1,4 @@
-# Projects
+## Projects
 
 - [x] Visualizer
 - [x] Clock's Around the World
