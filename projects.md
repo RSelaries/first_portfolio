@@ -3,6 +3,7 @@
 - [x] Visualizer
 - [x] Clock's Around the World
 - [x] Modelage
+  - [ ] Continuer de le remplir
 - [x] Dessins perso
 - [x] Photos Lorine
 - [ ] Photos Nus

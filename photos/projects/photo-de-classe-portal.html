@@ -3,6 +3,7 @@
     <a class="photos portal filter disable-link" href="../photos/photo-de-classe-portal">        
         <div class="photos portal photo-album-name">
             <h1 class="portal">Photo de classe</h1>
+            <p>Photo de classe individuelle reprenant la pochette du jeu Portal 2</p>
             <h2 class="portal">2022</h2>
         </div>
     </a>
@@ -27,39 +28,29 @@
     }
 
     .portal .photo-album-name {
+        padding: 2% 2.5%;
+        font-family: "Oswald", sans-serif;
+        font-size: 0.7rem;
+        padding-bottom: 2rem;
         color: #fdf8f1;
-        text-transform: uppercase;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-family: 'Archivo Black', sans-serif;
+        width: var(--album-width);
+        aspect-ratio: 5/4;
+        background-color: #0007;
     }
 
     .portal .filter {
         background-color: #0000 !important;
         position: relative;
-        display: flex;
+        /* display: flex; */
     }
 
     .portal div h1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        font-size: 1.5rem;
+        padding-bottom: 0.3rem;
     }
 
-    .portal h1 {
-        padding-top: 2%;
-        line-height: 80%;
-        color: #000a;
-        text-align: center;
-        /* position: absolute; */
-        font-size: calc(var(--album-width) * 0.092);  
-    }
-
-    .portal h2 {
-        padding-left: 2%;
-        color: #000a;
+    .portal p {
+        color: #aca59c;
     }
 </style>
 

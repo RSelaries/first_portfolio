@@ -21,3 +21,24 @@
     transition: all 0.25s ease-in-out;
     opacity: 1 !important;
 }
+
+.photo-album-name {
+    padding: 2% 2.5%;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.7rem;
+    padding-bottom: 2rem;
+    color: #fdf8f1;
+    width: var(--album-width);
+    aspect-ratio: 5/4;
+    background-color: #0004;
+}
+
+.photos p {
+    color: #aca59c;
+    max-width: calc(var(--album-width) * 0.5) !important;
+}
+
+.photos h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.3rem;
+}
