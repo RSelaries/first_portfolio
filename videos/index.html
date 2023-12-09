@@ -2,11 +2,11 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vidéos</title>
 
         <link rel="stylesheet" href="../videos/style.css" />
-        <link rel="icon" href="../assets/images/icon.png" type="image/x-icon"/>
+        <link rel="icon" href="../assets/images/icon.png" type="image/x-icon" />
 
         <!-- Load Header and Footer -->
         <script
@@ -22,8 +22,15 @@
         </script>
 
         <!-- Load Projects -->
-        <script type="module" src="../assets/js-assets/fetchProjects.js"></script>
-        <script> $(function () { fetchProjects('videos') }) </script>
+        <script
+            type="module"
+            src="../assets/js-assets/fetchProjects.js"
+        ></script>
+        <script>
+            $(function () {
+                fetchProjects("videos");
+            });
+        </script>
 
         <!-- Change header colors -->
         <style>
@@ -46,9 +53,7 @@
 
         <script>
             function hoverForSmartphone(projectNumber, isTrue) {
-                let projectImage =
-                    document.getElementsByClassName(projectNumber)[0]
-                        .children[1];
+                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1];
                 projectImage.classList.add("smartphone-hover");
 
                 document.ontouchend = (event) => {

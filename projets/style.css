@@ -14,25 +14,20 @@ section.all-projects {
 }
 
 .forProjectPage {
-    width : 0vw;
+    width : var(--image-width);
+    aspect-ratio: 5/4;
 }
 
 @media (max-width : 500px) {
     :root {
         --gap-between-projects : 0vw;
-        --project-size: calc( 100vw / 2 );
-        --image-width: calc( var(--project-size) - var(--gap-between-projects) );
+        --project-size: 50vw;
+        --image-width: var(--project-size);
         --project-image-font-size: calc(var(--image-width) / 4.8 );
     }
 
     section.all-projects {
         grid-template-columns: repeat(2 , auto);
-    }
-
-    .photo-album-name,
-    .beaux-arts .project-name,
-    .project.videos .project-second-image h1 {
-        display: none;
     }
 
     .project.videos .project-second-image p.description {

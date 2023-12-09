@@ -5,3 +5,7 @@
 .project-image {
     margin-bottom: var(--gap-between-projects);
 }
+
+.beaux-arts .filter {
+    width: var(--image-width) !important;
+}
