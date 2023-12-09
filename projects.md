@@ -3,7 +3,7 @@
 - [x] Visualizer
 - [x] Clock's Around the World
 - [x] Modelage
-- [ ] Dessins perso
+- [x] Dessins perso
 - [x] Photos Lorine
 - [ ] Photos Nus
 - [ ] Photo Argentique

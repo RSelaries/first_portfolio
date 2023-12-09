@@ -10,3 +10,8 @@
     background-color: #0004
 }
 
+@media (max-width: 500px) {
+    .photos h2 {
+        font-size: 1rem;
+    }
+}
