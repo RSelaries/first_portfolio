@@ -12,7 +12,17 @@
 <style>
     @import url(../beaux-arts/style-for-projects.css);
 
-    .beaux-arts#modelage { background-image: url(../beaux-arts/modelage/assets/low-quality/IMG_20231109_171029.webp); }
+    .beaux-arts#modelage {
+        background-image: url(../beaux-arts/assets/miniatures/test.jpg);
+    }
+    .beaux-arts#modelage:hover {
+        background-image: url(../beaux-arts/assets/miniatures/modelage.jpg);
+        transition: all 0.25s ease-in-out;
+    }
+    .beaux-arts#modelage.smartphone-hover {
+        background-image: url(../beaux-arts/assets/miniatures/modelage.jpg);
+        transition: all 0.25s ease-in-out;
+    }
 
     .modelage .filter {
         background-color: #0004 !important;

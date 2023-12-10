@@ -1,6 +1,13 @@
-<div class="project-image dessins-persos-2021 beaux-arts" id="dessins-persos-2021">
+<div
+    class="project-image dessins-persos-2021 beaux-arts"
+    id="dessins-persos-2021"
+>
     <div class="use-less"></div>
-    <a class="filter" href="../beaux-arts/dessins-personnels-2020-2021/" ontouchstart="hoverForSmartphone('dessins-persos-2021');">
+    <a
+        class="filter"
+        href="../beaux-arts/dessins-personnels-2020-2021/"
+        ontouchstart="hoverForSmartphone('dessins-persos-2021');"
+    >
         <div class="project-name">
             <h1>Anciens dessins personnels</h1>
             <p>Dessins réalisés pendant mes années d'arts appliqués au lycée</p>
@@ -12,12 +19,21 @@
 <style>
     @import url(../beaux-arts/style-for-projects.css);
 
-    .beaux-arts#dessins-persos-2021 { background-image: url(../beaux-arts/assets/miniatures/IMG_2604.jpg); }
+    .beaux-arts#dessins-persos-2021 {
+        background-image: url(../beaux-arts/assets/miniatures/titre-DePe-20-21.jpg);
+    }
+    .beaux-arts#dessins-persos-2021:hover {
+        background-image: url(../beaux-arts/assets/miniatures/des-per-20-21.jpg);
+        transition: all 0.25s ease-in-out;
+    }
+    .beaux-arts#dessins-persos-2021.smartphone-hover {
+        background-image: url(../beaux-arts/assets/miniatures/des-per-20-21.jpg);
+        transition: all 0.25s ease-in-out;
+    }
 
     .dessins-persos-2021 .filter {
         background-color: #0007 !important;
         position: relative;
         display: flex;
     }
-
 </style>
