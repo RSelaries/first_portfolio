@@ -14,4 +14,8 @@
     .beaux-arts h2 {
         font-size: 1rem;
     }
+
+    .beaux-arts h1 {
+        display: none;
+    }
 }

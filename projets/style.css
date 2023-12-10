@@ -24,6 +24,8 @@ section.all-projects {
         --project-size: 50vw;
         --image-width: var(--project-size);
         --project-image-font-size: calc(var(--image-width) / 4.8 );
+
+        --album-width: var(--image-width);
     }
 
     section.all-projects {

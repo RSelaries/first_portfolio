@@ -119,6 +119,9 @@ section.welcome .apropo {
         padding-top: 4rem;
     }
     .background { background-position: 57% 50%; }
+    .center-about {
+        padding: 0.5rem;
+    }
 }
 
 @media (min-width: 501px) and (max-width: 1100px) {

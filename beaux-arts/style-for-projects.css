@@ -22,6 +22,11 @@
     opacity: 1;
 }
 
+.beaux-arts .filter.smartphone-hover {
+    transition: all 0.25s ease-in-out;
+    opacity: 1;
+}
+
 .beaux-arts .project-name {
     padding: 2% 2.5%;
     font-family: "Oswald", sans-serif;
@@ -35,10 +40,15 @@
 
 .beaux-arts p {
     color: #aca59c;
-    max-width: calc(var(--album-width) * 0.5) !important;
 }
 
 .beaux-arts h1 {
     font-size: 1.5rem;
     padding-bottom: 0.3rem;
+}
+
+@media (min-width: 501px) {
+    .beaux-arts p {
+        max-width: calc(var(--album-width) * 0.5) !important;
+    }
 }

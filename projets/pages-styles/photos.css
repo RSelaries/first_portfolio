@@ -14,4 +14,8 @@
     .photos h2 {
         font-size: 1rem;
     }
+
+    .photos h1 {
+        display: none;
+    }
 }

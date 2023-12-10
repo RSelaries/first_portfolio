@@ -1,5 +1,10 @@
 <div class="project-image maree-basse beaux-arts" id="one">
-    <a class="filter" href="../beaux-arts/maree-basse/">
+    <div class="use-less"></div>
+    <a
+        class="filter"
+        href="../beaux-arts/maree-basse/"
+        ontouchstart="hoverForSmartphone('maree-basse');"
+    >
         <div class="project-name maree-basse">
             <h1>Projet Maree Basse</h1>
             <p>Projet d'expression plastique avec pour thème la marée basse</p>
@@ -10,8 +15,6 @@
 
 <style>
     @import url(../beaux-arts/style-for-projects.css);
-
-    #one { background-image: url(../beaux-arts/assets/miniatures/marée\ basse2.webp); }
 
     .project-name.maree-basse {
         width: 100%;
@@ -25,11 +28,44 @@
 
     @media (min-width: 501px) {
         .project-name.maree-basse {
-            padding: calc(var(--album-width) * 0.02) calc(var(--album-width) * 0.025) !important;
+            padding: calc(var(--album-width) * 0.02)
+                calc(var(--album-width) * 0.025) !important;
         }
 
         .maree-basse p {
             max-width: none !important;
+        }
+
+        #one {
+            background-image: url(../beaux-arts/assets/miniatures/mar-bas-grand.jpg);
+            background-size: cover;
+        }
+
+        #one:hover {
+            background-image: url(../beaux-arts/assets/miniatures/mar-deux-grand.jpg);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .project-sized #one {
+            background-image: url(../beaux-arts/assets/miniatures/mar-bas.jpg) !important;
+            background-size: cover;
+        }
+
+        .project-sized #one:hover {
+            background-image: url(../beaux-arts/assets/miniatures/mar-deux.jpg) !important;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+
+    @media (max-width: 500px) {
+        #one {
+            background-image: url(../beaux-arts/assets/miniatures/mar-bas.jpg);
+            background-size: cover;
+        }
+
+        #one.smartphone-hover {
+            background-image: url(../beaux-arts/assets/miniatures/mar-deux.jpg) !important;
+            transition: all 0.25s ease-in-out;
         }
     }
 </style>

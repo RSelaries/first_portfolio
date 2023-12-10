@@ -72,11 +72,25 @@
             <div class="forProjectPage disable-link" id="visualizer"></div>
             <div class="forProjectPage disable-link" id="nus"></div>
             <div class="forProjectPage disable-link" id="clocks-around-the-world"></div>
-            <div class="forProjectPage disable-link" id="maree-basse"></div>
+            <div class="forProjectPage disable-link project-sized" id="maree-basse"></div>
             <div class="forProjectPage disable-link" id="projet-vr-lorine"></div>
             <div class="forProjectPage disable-link" id="modelage"></div>
             <div class="forProjectPage disable-link" id="photo-de-classe-portal"></div>
             <div class="forProjectPage disable-link" id="dessins-persos-2021"></div>
         </section>
+
+        <script>
+            function hoverForSmartphone(projectNumber, isTrue) {
+                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1]
+                let projectImage1 = document.getElementsByClassName(projectNumber)[0]
+                projectImage.classList.add("smartphone-hover");
+                projectImage1.classList.add("smartphone-hover");
+
+                document.ontouchend = (event) => {
+                    projectImage.classList.remove("smartphone-hover");
+                    projectImage1.classList.remove("smartphone-hover");
+                };
+            }
+        </script>
     </body>
 </html>

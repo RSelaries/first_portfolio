@@ -52,5 +52,18 @@
             <div class="forProjectPage disable-link" id="dessins-persos-2021"></div>
         </div>
 
+        <script>
+            function hoverForSmartphone(projectNumber) {
+                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1];
+                let projectImage1 = document.getElementsByClassName(projectNumber)[0];
+                projectImage.classList.add("smartphone-hover");
+                projectImage1.classList.add("smartphone-hover");
+
+                document.ontouchend = (event) => {
+                    projectImage.classList.remove("smartphone-hover");
+                    projectImage1.classList.remove("smartphone-hover");
+                };
+            }
+        </script>
     </body>
 </html>

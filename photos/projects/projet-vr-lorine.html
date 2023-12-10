@@ -1,5 +1,6 @@
 <div class="photos photo-album-cover lorine" id="two">
-    <a class="photos filter disable-link" href="../photos/photos-de-projet">
+    <div class="use-less"></div>    
+    <a class="photos filter disable-link" href="../photos/photos-de-projet" ontouchstart="hoverForSmartphone('lorine');">
         <div class="photos photo-album-name">
             <h1>Photos de projet</h1>
             <p>Photos du projet de Lorine Mercier</p>
@@ -11,6 +12,8 @@
 <style>
     @import url(../photos/style-for-projects.css);
 
-    #two { background-image: url(../photos/assets/miniatures/photos_de_projets.webp ); }
+    #two { background-image: url(../photos/assets/miniatures/lorine-titre.jpg ); }
+    #two:hover { background-image: url(../photos/assets/miniatures/lorine.jpg ); transition: all 0.25s ease-in-out; }
+    .smartphone-hover#two { background-image: url(../photos/assets/miniatures/lorine.jpg ); transition: all 0.25s ease-in-out; }
 
 </style>

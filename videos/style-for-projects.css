@@ -54,3 +54,9 @@
 .project.videos .project-second-image p.description {
     color: #aca59c;
 }
+
+@media (min-width: 501px) {
+    .videos p {
+        max-width: calc(var(--image-width) * 0.5) !important;
+    }
+}
