@@ -108,26 +108,27 @@
 </style>
 
 <div class="slideshow-container">
-
     <div class="mySlides fade">
-        <img class="slide-image" src="./assets/high-res/001.jpg">
+        <img class="slide-image" src="./assets/high-res/001.jpg" />
     </div>
 
     <script>
-        let slideshowContainer = document.querySelector('.slideshow-container');
-        let mySlides = document.querySelector('.mySlides');
-        let slideImage = document.querySelector('.slide-image');
+        let slideshowContainer = document.querySelector(".slideshow-container");
+        let mySlides = document.querySelector(".mySlides");
+        let slideImage = document.querySelector(".slide-image");
 
         let startIndex1 = startIndex;
         let endIndex1 = endIndex;
 
-        for (let i = startIndex1; i <= endIndex1 ; i++) {
-        let mySlidesClone = mySlides.cloneNode(true);
-        let imgIndex1 = i.toString().padStart(3, 0);
-        mySlidesClone.querySelector('.slide-image').src = `./assets/high-res/${imgIndex1}.jpg`
+        for (let i = startIndex1; i <= endIndex1; i++) {
+            let mySlidesClone = mySlides.cloneNode(true);
+            let imgIndex1 = i.toString().padStart(3, 0);
+            mySlidesClone.querySelector(
+                ".slide-image"
+            ).src = `./assets/high-res/${imgIndex1}.jpg`;
 
-        slideshowContainer.append(mySlidesClone);
-    }
+            slideshowContainer.append(mySlidesClone);
+        }
     </script>
 
     <a class="prev prevNextButtons" onclick="plusSlides(-1)">❮</a>
@@ -137,9 +138,9 @@
 <script>
     let slideIndex;
 
-    document.onclick = function(e) {
+    document.onclick = function (e) {
         showSlides(slideIndex);
-    }
+    };
 
     function plusSlides(n) {
         showSlides((slideIndex += n));
@@ -162,39 +163,47 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
-        console.log('image '+slideIndex+' is currently shown');
+        console.log("image " + slideIndex + " is currently shown");
     }
 
     // function to close the slidshow
     isCarouselActive = false;
 
-    document.onclick = function(e) {    
-        slideImg = document.querySelector('.slide-image');
-        prevNextButtons = document.querySelectorAll('.prevNextButtons')
+    document.onclick = function (e) {
+        slideImg = document.querySelector(".slide-image");
+        prevNextButtons = document.querySelectorAll(".prevNextButtons");
 
-        if(isCarouselActive === true
-        && e.target.classList.contains('slide-image') === false
-        && e.target.classList.contains('prevNextButtons') === false
-        && e.target.classList.contains('grid-item') === false
-        ){
-            document.getElementById('carousel-div').classList.remove('carousel-active');
-            document.body.classList.remove('carousel-active');
+        if (
+            isCarouselActive === true &&
+            e.target.classList.contains("slide-image") === false &&
+            e.target.classList.contains("prevNextButtons") === false &&
+            e.target.classList.contains("grid-item") === false
+        ) {
+            document
+                .getElementById("carousel-div")
+                .classList.remove("carousel-active");
+            document.body.classList.remove("carousel-active");
         }
 
-        if (e.target.id !== 'leftWindow') {
-            if (e.target.id == 'openBtn' || e.target.id == 'openBtn1' || e.target.id == 'openBtn2' || e.target.id == 'openBtn3') {
+        if (e.target.id !== "leftWindow") {
+            if (
+                e.target.id == "openBtn" ||
+                e.target.id == "openBtn1" ||
+                e.target.id == "openBtn2" ||
+                e.target.id == "openBtn3"
+            ) {
                 leftWindow.classList.add("active");
 
-                disableLink.forEach(link => {
-                    link.style.pointerEvents = 'none';
+                disableLink.forEach((link) => {
+                    link.style.pointerEvents = "none";
                 });
             } else {
                 leftWindow.classList.remove("active");
 
-                disableLink.forEach(link => {
-                    link.style.pointerEvents = 'all';
+                disableLink.forEach((link) => {
+                    link.style.pointerEvents = "all";
                 });
             }
         }
-    }
+    };
 </script>

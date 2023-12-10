@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Photos de Projet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nus</title>
 
         <link rel="stylesheet" href="style.css" />
-        <link rel="icon" href="../../assets/images/icon.png" type="image/x-icon"/>
+        <link
+            rel="icon"
+            href="../../assets/images/icon.png"
+            type="image/x-icon"
+        />
 
+        <!-- Load Header and Footer -->
         <script
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -16,7 +21,6 @@
         <script>
             $(function () {
                 $("#header").load("../../assets/html-assets/header.html");
-                $("#footer").load("footer.html");
                 $("#carousel-div").load("./carousel/carousel.html");
             });
         </script>
@@ -24,15 +28,18 @@
         <!-- Change header colors -->
         <style>
             :root {
-                --header-background-color: #0001;
-                --header-left-window-background-color: #0000;
+                --header-background-color: #18181899;
+                --header-left-window-background-color: #fff4;
                 --header-left-window-home-button-color: #000;
-                --header-text-color: #e1d5c4;
-                --header-left-window-text-color: #0003;
+                --header-text-color: #fdf8f1;
+                --header-left-window-text-color: #000a;
+            }
+
+            .headerDiv .photos {
+                color: #930e0e !important;
             }
         </style>
     </head>
-
     <body>
         <div id="header"></div>
 
@@ -40,7 +47,6 @@
 
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <div class="grid">
-            
             <img
                 data-id="1"
                 onclick="
@@ -57,26 +63,28 @@
                 src="./assets/low-res/001.webp"
             />
             <!-- duplicate the <img> element up to 'enIndex' and increment the number in '004.png' -->
-            <script> 
+            <script>
                 let grid = document.currentScript.parentElement;
                 let imgSrc = grid.querySelector("img");
 
                 let startIndex = 2;
-                let endIndex = 22;
+                let endIndex = 8;
 
-                for(let i = startIndex; i <= endIndex; i++) {
+                for (let i = startIndex; i <= endIndex; i++) {
                     /** @type{HTMLImageElement} */
                     let imgClone = imgSrc.cloneNode(true);
                     let imgIndex = i.toString().padStart(3, 0);
-                    imgClone.src = `./assets/low-res/${imgIndex}.webp`
+                    imgClone.src = `./assets/low-res/${imgIndex}.webp`;
                     imgClone.dataset.id = i;
                     grid.append(imgClone);
                 }
             </script>
-
         </div>
+        
         <script>
-            let msnry = new Masonry(".grid", { itemSelector: ".grid-item" });
+            let msnry = new Masonry(".grid", {
+                itemSelector: ".grid-item",
+            });
             msnry.layout();
             for (const img of document.querySelectorAll(".grid-item")) {
                 img.onload = () => {
@@ -84,5 +92,5 @@
                 };
             }
         </script>
-    </body> 
+    </body>
 </html>

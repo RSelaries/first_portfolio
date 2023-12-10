@@ -180,5 +180,21 @@
             document.getElementById('carousel-div').classList.remove('carousel-active');
             document.body.classList.remove('carousel-active');
         }
+
+        if (e.target.id !== 'leftWindow') {
+            if (e.target.id == 'openBtn' || e.target.id == 'openBtn1' || e.target.id == 'openBtn2' || e.target.id == 'openBtn3') {
+                leftWindow.classList.add("active");
+
+                disableLink.forEach(link => {
+                    link.style.pointerEvents = 'none';
+                });
+            } else {
+                leftWindow.classList.remove("active");
+
+                disableLink.forEach(link => {
+                    link.style.pointerEvents = 'all';
+                });
+            }
+        }
     }
 </script>
