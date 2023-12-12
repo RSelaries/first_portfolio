@@ -5,8 +5,9 @@
 - [x] Modelage
   - [ ] Continuer de le remplir
 - [x] Dessins perso
+  - [ ] Continuer de le remplir
 - [x] Photos Lorine
-- [ ] Photos Nus
+- [x] Photos Nus
 - [ ] Photo Argentique
 - [x] Marée Basse
 - [ ] Scarabé 3D
