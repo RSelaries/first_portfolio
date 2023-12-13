@@ -13,11 +13,6 @@ section.all-projects {
     padding-left: var(--gap-between-projects);
 }
 
-.forProjectPage {
-    width : var(--image-width);
-    aspect-ratio: 5/4;
-}
-
 @media (max-width : 500px) {
     :root {
         --gap-between-projects : 0vw;
