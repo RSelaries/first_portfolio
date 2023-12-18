@@ -1,5 +1,8 @@
 <div class="project one videos">
     <div class="project-second-image">
+        <video autoplay loop muted>
+            <source src="../videos/assets/miniatures/Visualizer2.webm" type="video/webm">
+        </video>
         <div class="project-text">
             <h1 class="project-name">Visualizer</h1>
             <p class="description">
@@ -8,26 +11,28 @@
             <p class="date">2023</p>
         </div>
     </div>
-    <a
-        href="../videos/Visualizer/"
-        class="project-image"
-        ontouchstart="hoverForSmartphone('one');"
-    >
+    <a href="../videos/Visualizer/" class="project-image" ontouchstart="hoverForSmartphone('one');">
         <div>Visualizer</div>
     </a>
 
     <style>
         @import url(../videos/style-for-projects.css);
 
-        .one.videos .project-second-image {
-            background-image: url(../videos/assets/miniatures/Visualizer2.gif);
+        .one.videos .project-second-image video {
+            z-index: -1;
+            object-position: 20% 50%;
+            position: absolute;
+            object-fit: cover;
+            width: var(--image-width);
+            height: calc( var(--image-width) * calc(4/5) );
         }
+
         .one.videos .project-image {
             background-image: url(../videos/assets/miniatures/Visualizer1.gif);
             color: #0000;
         }
         .one.videos .project-image div {
-            background-image: url(../videos/assets/miniatures/Visualizer3.gif);
+            background-image: url(../videos/assets/miniatures/Visualizer3.webp);
             background-position: 50% 50%;
             background-clip: text;
             -webkit-background-clip: text;

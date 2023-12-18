@@ -1,5 +1,8 @@
 <div class="project two videos">
     <div class="project-second-image">
+        <video autoplay loop muted>
+            <source src="../videos/assets/miniatures/heures des villes miniatures.webm" type="video/webm">
+        </video>
         <div class="project-text">
             <h1 class="project-name">Time Zones</h1>
             <p class="description">
@@ -8,22 +11,35 @@
             <p class="date">2022</p>
         </div>
     </div>
-    <a href="../../videos/time-zones/" class="project-image" ontouchstart="hoverForSmartphone('two');">
+    <a href="../videos/time-zones/" class="project-image" ontouchstart="hoverForSmartphone('two');">
+        <video autoplay loop muted>
+            <source src="../videos/assets/miniatures/miniature2.webm" type="video/webm">
+        </video>
         <div>Time Zones</div>
     </a>
 
     <style>
         @import url(../videos/style-for-projects.css);
 
-        .two.videos .project-image {
-            background-image: url(../videos/assets/miniatures/miniature2.gif);
-            background-position: 20% 50%;
+        .two.videos .project-image video {
+            object-position: 20% 50%;
+            position: absolute;
+            object-fit: cover;
+            width: var(--image-width);
+            height: calc( var(--image-width) * calc(4/5) );
         }
-        .two.videos .project-second-image {
-            background-image: url(../videos/assets/miniatures/heures\ des\ villes\ miniatures.gif);
+
+        .two.videos .project-second-image video {
+            z-index: -1;
+            object-position: 50% 50%;
+            position: absolute;
+            object-fit: cover;
+            width: var(--image-width);
+            height: calc( var(--image-width) * calc(4/5) );
         }
 
         .two.videos .project-image div {
+            z-index: 3;
             width: 100%;
             height: 100%;
             background-color: #0008;
