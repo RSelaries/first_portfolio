@@ -5,7 +5,7 @@ html {
 }
 
 .container {
-    padding: var(--gap);
+    padding: var(--container-gap);
     padding-top: 3rem;
     display: grid;
     gap: var(--gap);
@@ -35,8 +35,9 @@ html {
         background-color: #0004;
     }
     :root {
+        --container-gap: 2vw;
         --gap: 2vw;
-        --album-width: calc(calc(100vw - calc(var(--gap) * 3)) / 2) ;
+        --album-width: calc(calc(100vw - var(--gap) - calc(var(--container-gap) * 2)) / 2) ;
         --album-height: calc(var(--album-width) * calc(4/5));
     }
 }

@@ -39,7 +39,7 @@
         --project-size: calc(50vw - var(--half-gap-between-projects) );
         /* --image-width: 47.75vw; */
         --image-width: calc( var(--project-size) - var(--gap-between-projects) );
-        --image-height: calc(40vw - var(--gap-between-projects) );
+        --image-height: calc(var(--image-width) * calc(4/5));
     }
 
     .grid {
