@@ -27,9 +27,15 @@
             src="../assets/js-assets/fetchProjects.js"
         ></script>
         <script>
-            $(function () { fetchProjects("videos"); });
-            $(function () { fetchProjects("beaux-arts"); });
-            $(function () { fetchProjects("photos"); });
+            $(function () {
+                fetchProjects("videos");
+            });
+            $(function () {
+                fetchProjects("beaux-arts");
+            });
+            $(function () {
+                fetchProjects("photos");
+            });
         </script>
 
         <!-- Change header colors -->
@@ -64,26 +70,233 @@
                 };
             }
         </script>
+
+        <!-- Sorting Algorithm -->
+        <script src="../assets/js-assets/sortAlgorithm.js"></script>
+
+        <script>
+            window.onload = function() {
+                document.querySelector('.sort-menu-button .up').style.display = `block`
+                document.querySelector('.best.arrow.up').style.display = `block`
+            }
+        </script>
     </head>
     <body>
         <div id="header"></div>
 
+        <div class="empty0"></div>
+        <div class="sort-button-wrapper">
+            <button 
+                class="sort-menu-button"
+
+                onclick="
+                    if(document.querySelector('span.arrow.up').style.display === 'block') {
+                        document.querySelector('.sorting-menu-wrapper').style.display = 'block'
+
+                        document.querySelector('span.arrow.up').style.display = 'none'
+                        document.querySelector('span.arrow.down').style.display = 'block'
+                    } else {
+                        document.querySelector('.sorting-menu-wrapper').style.display = 'none'
+
+                        document.querySelector('span.arrow.down').style.display = 'none'
+                        document.querySelector('span.arrow.up').style.display = 'block'
+                    }
+                "
+            >
+                trier
+                <span class="arrow down menu">↓</span>
+                <span class="arrow up menu">↑</span>
+            </button>
+        </div>
+
+        <div class="sorting-menu-wrapper">
+            <div class="sorting-menu">
+                <span>trier par : </span>
+                <button
+                    onclick="
+                        numberSorting(`all-projects`, `list-element`, `best`)
+                        
+                        document.querySelector('span.arrow.date.up').style.display = 'none'
+                        document.querySelector('span.arrow.date.down').style.display = 'none'
+                        document.querySelector('span.arrow.type.up').style.display = 'none'
+                        document.querySelector('span.arrow.type.down').style.display = 'none'
+
+                        if (document.querySelector('span.arrow.best.up').style.display === 'none') {
+                            document.querySelector('span.arrow.best.up').style.display = 'block'
+                            document.querySelector('span.arrow.best.down').style.display = 'none'
+                        } else {
+                            document.querySelector('span.arrow.best.up').style.display = 'none'
+                            document.querySelector('span.arrow.best.down').style.display = 'block'
+                        }
+                    ">
+                    meilleurs <span class="arrow down best">↓</span
+                    ><span class="arrow up best">↑</span>
+                </button>
+                <span class="trait">|</span>
+                <button
+                    onclick="
+                        numberSorting(`all-projects`, `list-element`, `dateposition`)
+
+                        document.querySelector('span.arrow.best.up').style.display = 'none'
+                        document.querySelector('span.arrow.best.down').style.display = 'none'
+                        document.querySelector('span.arrow.type.up').style.display = 'none'
+                        document.querySelector('span.arrow.type.down').style.display = 'none'
+
+                        if (document.querySelector('span.arrow.date.down').style.display === 'none') {
+                            document.querySelector('span.arrow.date.down').style.display = 'block'
+                            document.querySelector('span.arrow.date.up').style.display = 'none'
+                        } else {
+                            document.querySelector('span.arrow.date.down').style.display = 'none'
+                            document.querySelector('span.arrow.date.up').style.display = 'block'
+                        }
+                    ">
+                    récents <span class="arrow down date">↓</span
+                    ><span class="arrow up date">↑</span>
+                </button>
+                <span class="trait">|</span>
+                <button
+                    onclick="
+                        numberSorting(`all-projects`, `list-element`, `projecttype`)
+
+                        document.querySelector('span.arrow.date.up').style.display = 'none'
+                        document.querySelector('span.arrow.date.down').style.display = 'none'
+                        document.querySelector('span.arrow.best.up').style.display = 'none'
+                        document.querySelector('span.arrow.best.down').style.display = 'none'
+
+                        if (document.querySelector('span.arrow.type.up').style.display === 'none') {
+                            document.querySelector('span.arrow.type.up').style.display = 'block'
+                            document.querySelector('span.arrow.type.down').style.display = 'none'
+                        } else {
+                            document.querySelector('span.arrow.type.up').style.display = 'none'
+                            document.querySelector('span.arrow.type.down').style.display = 'block'
+                        }
+                    ">
+                    type <span class="arrow down type">↓</span
+                    ><span class="arrow up type">↑</span>
+                </button>
+            </div>
+        </div>
+
+        <!--    data- meanings :
+
+            datePosition : 1 for the oldest
+            best: 1 is the best
+            project types :
+                photos
+                videos
+                beaux-arts
+                motion-design
+                3D
+        -->
+
         <section class="all-projects">
-            <div class="forProjectPage disable-link" id="visualizer"></div>
-            <div class="forProjectPage disable-link" id="nus"></div>
-            <div class="forProjectPage disable-link" id="clocks-around-the-world"></div>
-            <div class="forProjectPage disable-link project-sized" id="maree-basse"></div>
-            <div class="forProjectPage disable-link" id="projet-vr-lorine"></div>
-            <div class="forProjectPage disable-link" id="modelage"></div>
-            <div class="forProjectPage disable-link" id="photo-de-classe-portal"></div>
-            <div class="forProjectPage disable-link" id="dessins-persos-2021"></div>
-            <div class="forProjectPage disable-link" id="avant-le-denouement"></div>
+            <div class="list-element">
+                <!-- Visualizer -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="1"
+                    data-datePosition="5"
+                    data-projectType="videos"
+                    id="visualizer"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Nus -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="2"
+                    data-datePosition="6"
+                    data-projectType="photos"
+                    id="nus"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Time zones -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="3"
+                    data-datePosition="2"
+                    data-projectType="videos"
+                    id="clocks-around-the-world"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Marée basse -->
+                <div
+                    class="forProjectPage disable-link project-sized"
+                    data-best="4"
+                    data-datePosition="7"
+                    data-projectType="beaux-arts"
+                    id="maree-basse"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Truc VR Lorine -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="5"
+                    data-datePosition="4"
+                    data-projectType="photos"
+                    id="projet-vr-lorine"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Modelage -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="6"
+                    data-datePosition="8"
+                    data-projectType="beaux-arts"
+                    id="modelage"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Photo de classe - Portal -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="7"
+                    data-datePosition="3"
+                    data-projectType="photos"
+                    id="photo-de-classe-portal"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Dessins persos -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="8"
+                    data-datePosition="1"
+                    data-projectType="beaux-arts"
+                    id="dessins-persos-2021"
+                ></div>
+            </div>
+
+            <div class="list-element">
+                <!-- Avant le dénouement -->
+                <div
+                    class="forProjectPage disable-link"
+                    data-best="9"
+                    data-datePosition="9"
+                    data-projectType="photos"
+                    id="avant-le-denouement"
+                ></div>
+            </div>
         </section>
 
         <script>
             function hoverForSmartphone(projectNumber, isTrue) {
-                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1]
-                let projectImage1 = document.getElementsByClassName(projectNumber)[0]
+                let projectImage =
+                    document.getElementsByClassName(projectNumber)[0]
+                        .children[1];
+                let projectImage1 =
+                    document.getElementsByClassName(projectNumber)[0];
                 projectImage.classList.add("smartphone-hover");
                 projectImage1.classList.add("smartphone-hover");
 
