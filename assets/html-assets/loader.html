@@ -1,0 +1,154 @@
+<div class="loader-wrapper">
+    <div class="header-shell">
+        <div class="logo"><span>sela</span><span>ries</span></div>
+
+        <div class="center-buttons">
+            <div class="button-shell"><span>projets</span></div>
+            <span class="tiret">|</span>
+            <div class="button-shell"><span>photos</span></div>
+            <div class="button-shell"><span>videos</span></div>
+            <div class="button-shell"><span>beaux</span><span class="tiret-shell">-</span><span>arts</span></div>
+        </div>
+
+        <div class="right-stuff"></div>
+    </div>
+
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle
+                class="path"
+                cx="50"
+                cy="50"
+                r="20"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10"
+            />
+        </svg>
+    </div>
+</div>
+
+<style>
+    .loader-wrapper {
+        width: 100vw;
+        height: 100vh;
+        background-color: #0a0a0a;
+        position: absolute;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        user-select: none;
+
+        .header-shell {
+            display: flex;
+            width: 100vw;
+            height: 2.2rem;
+            background-color: var(--header-background-color);
+            position: absolute;
+            top: 0;
+            align-items: center;
+            padding: 0 0.5rem;
+        }
+
+        .logo > span {
+            color: #fdf8f129;
+        }
+
+        .button-shell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1rem;
+            margin: 0 0.5rem;
+            text-align: center;
+            font-family: Rubik Mono One;
+            font-size: 1rem;
+
+            background-color: #fdf8f129;
+            border-radius: 6px;
+        }
+
+        .center-buttons .button-shell span {
+            color: transparent !important;
+        }
+
+        .button-shell span.tiret-shell {
+            font-size: 0.5rem;
+        }
+    }
+
+    .loader {
+        position: relative;
+        margin: 0 auto;
+        width: var(--loader-size);
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .circular {
+            animation: rotate 2s linear infinite;
+            height: 100%;
+            transform-origin: center center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            animation: dash 1.5s ease-in-out infinite;
+            stroke-linecap: round;
+            stroke: var(--loader-color);
+        }
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35px;
+        }
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124px;
+        }
+    }
+</style>
+
+<script>
+    console.log(document.readyState)
+    document.onreadystatechange = () => {
+        if (document.readyState === `complete`) {
+            setTimeout(function () {
+                // document.querySelector(`.loader-wrapper`).parentNode.style.display = `none`
+                document.querySelector("body").style.overflow = `visible`
+                $(".loader-wrapper").fadeOut("slow")
+            }, 500)
+        }
+    };
+
+    setTimeout(function () {
+        if (document.readyState === 'complete') {
+            document.querySelector("body").style.overflow = `visible`
+                $(".loader-wrapper").fadeOut("slow")
+        }
+    }, 2000)
+</script>
