@@ -1,0 +1,89 @@
+@import url(../../assets/css-assets/reset.css);
+
+:root {
+    --scroll-percent: ;
+}
+
+html {
+    background-color: #010101;
+    font-family: 'Avant Garde Gothic';
+}
+
+body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100vw;
+    height: 100vh;
+    color: #e4c04d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 10vw;
+    font-family: 'aBigDeal';
+}
+
+.page {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    padding-left: 2rem;
+    /* text-transform: uppercase; */
+    font-size: 2rem;
+    color: rgb(150 134 82 / calc(var(--scroll-percent) * 1%) );
+    padding-bottom: 1rem;
+}
+
+h3 {
+    transform: translateY(-2rem);
+    color: #e4c04d;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Cardo', serif;
+    font-weight: 700;
+}
+
+p {
+    color: rgb(255 255 255 / calc(var(--scroll-percent) * 1%) );
+    text-align: justify;
+    font-size: 1rem
+}
+
+iframe {
+    width: var(--youtube-embed-width);
+    aspect-ratio: 16 / 9;
+    margin: 3rem 0;
+}
+
+.center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    :root {
+        --youtube-embed-width: 100vw;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+    :root {
+        --youtube-embed-width: 70vw;
+    }
+}
+
+@media (min-width: 701px) {
+    :root {
+        --youtube-embed-width: 50vw;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Justyna Wydrzyńska</title>
+
+        <link rel="stylesheet" href="./style.css" />
+
+        <link
+            rel="icon"
+            href="../../assets/images/icon.png"
+            type="image/x-icon"
+        />
+
+        <!-- Load header and footer -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $(function () {
+                $("#header").load("../../assets/html-assets/header.html");
+            });
+        </script>
+        <script src="./scroll.js"></script>
+
+        <!-- Change header colors -->
+        <style>
+            :root {
+                --header-background-color: #18181899;
+                --header-left-window-background-color: #fff4;
+                --header-left-window-home-button-color: #000;
+                --header-text-color: #fff;
+                --header-left-window-text-color: #000a;
+            }
+
+            .headerDiv .videos {
+                color: #e4c04d !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div class="title">JUSTYNA WYDRZYNSKA</div>
+        <h3>🢓</h3>
+
+        <div class="center-horizontal">
+            <div class="page">
+                <h1>Projet</h1>
+                <p>
+                    Exercice réalisé en cours consistant à illustrer une histoire d'Amnesty International.
+                </p>
+    
+                <div class="center-horizontal">
+                    <iframe
+                        class="youtube-embed"
+                        src="https://www.youtube.com/embed/B5elVAPeR2o?si=dG6crvA_EtYCfqkq"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
