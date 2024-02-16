@@ -15,16 +15,7 @@
     #portal { background-image: url(../photos/assets/miniatures/portal.webp); }
 
     .portal .big-title {
-        width: var(--album-width);
-        aspect-ratio: 5/4;
-        position: absolute;
         background-image: url(../photos/assets/miniatures/photo-de-classe.png);
-        background-size: cover;
-    }
-
-    .portal .big-title.hover {
-        opacity: 0;
-        transition: all 0.25s ease-in-out;
     }
 
     .portal .photo-album-name {
@@ -53,19 +44,3 @@
         color: #aca59c;
     }
 </style>
-
-<script>
-    const bigTitle = document.querySelector('.big-title')
-
-    document.onmouseover = function (e) {
-        if (e.target.classList.contains('portal') === true) {
-            bigTitle.classList.add('hover')
-        }
-    }
-
-    document.onmouseout = function (e) {
-        bigTitle.classList.remove('hover')
-        if (e.target.classList.contains('portal') === false) {
-        }
-    }
-</script>

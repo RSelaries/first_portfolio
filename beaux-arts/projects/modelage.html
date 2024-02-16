@@ -1,5 +1,5 @@
 <div class="project-image modelage beaux-arts" id="modelage">
-    <div class="use-less"></div>
+    <div class="modelage big-title"></div>
     <a class="filter" href="../beaux-arts/modelage/" ontouchstart="hoverForSmartphone('modelage');">
         <div class="project-name">
             <h1>Modelage</h1>
@@ -12,11 +12,15 @@
 <style>
     @import url(../beaux-arts/style-for-projects.css);
 
+    .modelage .big-title {
+        background-image: url(../beaux-arts/assets/miniatures/modelage1.png);
+    }
+
     .beaux-arts#modelage {
-        background-image: url(../beaux-arts/assets/miniatures/titre-modelage.webp);
+        background-image: url(../beaux-arts/assets/miniatures/modelage.webp);
     }
     .beaux-arts#modelage:hover {
-        background-image: url(../beaux-arts/assets/miniatures/modelage.webp);
+        /* background-image: url(../beaux-arts/assets/miniatures/modelage.webp); */
         transition: all 0.25s ease-in-out;
     }
     .beaux-arts#modelage.smartphone-hover {

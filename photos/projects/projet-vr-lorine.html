@@ -1,6 +1,10 @@
 <div class="photos photo-album-cover lorine" id="two">
-    <div class="use-less"></div>    
-    <a class="photos filter disable-link" href="../photos/photos-de-projet" ontouchstart="hoverForSmartphone('lorine');">
+    <div class="lorine big-title"></div>
+    <a
+        class="photos filter disable-link"
+        href="../photos/photos-de-projet"
+        ontouchstart="hoverForSmartphone('lorine');"
+    >
         <div class="photos photo-album-name">
             <h1>Photos de projet</h1>
             <p>Photos du projet de Lorine Mercier</p>
@@ -12,8 +16,20 @@
 <style>
     @import url(../photos/style-for-projects.css);
 
-    #two { background-image: url(../photos/assets/miniatures/lorine-titre.webp ); }
-    #two:hover { background-image: url(../photos/assets/miniatures/lorine.webp ); transition: all 0.25s ease-in-out; }
-    .smartphone-hover#two { background-image: url(../photos/assets/miniatures/lorine.webp ); transition: all 0.25s ease-in-out; }
+    .lorine .big-title {
+        background-image: url(../photos/assets/miniatures/lorine1.png);
+        mix-blend-mode: overlay;
+    }
 
+    #two {
+        background-image: url(../photos/assets/miniatures/lorine.webp);
+    }
+    #two:hover {
+        /* background-image: url(../photos/assets/miniatures/lorine.webp); */
+        transition: all 0.25s ease-in-out;
+    }
+    .smartphone-hover#two {
+        background-image: url(../photos/assets/miniatures/lorine.webp);
+        transition: all 0.25s ease-in-out;
+    }
 </style>

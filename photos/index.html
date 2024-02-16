@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Photos</title>
 
         <link rel="stylesheet" href="style.css" />
@@ -22,8 +22,15 @@
         </script>
 
         <!-- Load Projects -->
-        <script type="module" src="../assets/js-assets/fetchProjects.js"></script>
-        <script>$(function () { fetchProjects("photos"); });</script>
+        <script
+            type="module"
+            src="../assets/js-assets/fetchProjects.js"
+        ></script>
+        <script>
+            $(function () {
+                fetchProjects("photos");
+            });
+        </script>
 
         <!-- Change header colors -->
         <style>
@@ -45,15 +52,26 @@
         <div id="header"></div>
 
         <div class="container import-container">
-            <div class="forProjectPage disable-link" id="photo-de-classe-portal"></div>
+            <div
+                class="forProjectPage disable-link"
+                id="photo-de-classe-portal"
+            ></div>
             <div class="forProjectPage disable-link" id="nus"></div>
-            <div class="forProjectPage disable-link" id="projet-vr-lorine"></div>
-            <div class="forProjectPage disable-link" id="avant-le-denouement"></div>
+            <div
+                class="forProjectPage disable-link"
+                id="projet-vr-lorine"
+            ></div>
+            <div
+                class="forProjectPage disable-link"
+                id="avant-le-denouement"
+            ></div>
         </div>
 
         <script>
             function hoverForSmartphone(projectNumber) {
-                let projectImage = document.getElementsByClassName(projectNumber)[0].children[1];
+                let projectImage =
+                    document.getElementsByClassName(projectNumber)[0]
+                        .children[1];
                 projectImage.classList.add("smartphone-hover");
 
                 document.ontouchend = (event) => {
@@ -61,6 +79,5 @@
                 };
             }
         </script>
-
     </body>
 </html>
