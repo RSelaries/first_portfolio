@@ -5,7 +5,6 @@ $(document).ready(function() {
         let docHeight = $(document).height();
         let winHeight = $(window).height();
         let scrollPercent = (scrollTop) / (docHeight - winHeight);
-        let scrollPercentRounded = Math.round(scrollPercent*100);
 
         let about = document.querySelector('.for-blur')
         let blur = Math.round(scrollPercent * 15)
